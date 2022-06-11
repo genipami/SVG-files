@@ -6,16 +6,18 @@
 class Rectangle : public Shape
 {
 private:
-    int width;
-    int height;
+    unsigned int width;
+    unsigned int height;
 
 public:
     Rectangle(int x, int y, String colour, int width, int height): Shape(x, y, colour), width(width), height(height){}
+    unsigned int getWidth() const { return width; }
+    unsigned int getHeight() const { return height; }
     friend std::istream& operator>>(std::istream &in, Rectangle& rectangle);
     friend std::ostream& operator<<(std::ostream &out, const Rectangle& rectangle);
-    virtual void translate(int vertical, int horizontal) override;
-    virtual bool withinRectangle(Rectangle &rectangle) const override;
-    virtual bool withinCircle(Circle &circle) const override;
+    virtual bool withinRectangle(const Rectangle &rectangle) const override;
+    virtual bool withinCircle(const Circle &circle) const override;
+    virtual void print() const override;
     virtual ~Rectangle() = default;
 };
 

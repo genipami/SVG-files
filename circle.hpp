@@ -10,11 +10,12 @@ private:
 
 public:
     Circle(int x, int y, String colour, unsigned int radius): Shape(x, y, colour), radius(radius){}
+    unsigned int getRadius() const {return radius;}
     friend std::istream& operator>>(std::istream &in, Circle& circle);
     friend std::ostream& operator<<(std::ostream &out, const Circle& circle);
-    virtual void translate(int vertical, int horizontal) override;
-    virtual bool withinRectangle(Rectangle &rectangle) const override;
-    virtual bool withinCircle(Circle &circle) const override;
+    virtual bool withinRectangle(const Rectangle &rectangle) const override;
+    virtual bool withinCircle(const Circle &circle) const override;
+    virtual void print()const override;
     virtual ~Circle() = default;
 };
 
