@@ -4,6 +4,7 @@
 std::istream &operator>>(std::istream &in, Rectangle &rectangle);
 std::ostream &operator<<(std::ostream &out, const Rectangle &rectangle)
 {
+    out<<"<rect x=\""<<rectangle.getX()<<"\" y=\""<<rectangle.getY()<<"\" width=\""<<rectangle.getWidth()<<"\" height=\""<<rectangle.getHeight()<<"\" fill=\""<<rectangle.getColour()<<"\" />"<< std::endl;
 }
 
 bool Rectangle::withinRectangle(const Rectangle &rectangle) const

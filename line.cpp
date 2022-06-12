@@ -1,9 +1,11 @@
 #include <iostream>
 #include "line.hpp"
-#include "shape.hpp"
 
 std::istream &operator>>(std::istream &in, Line &line);
-std::ostream &operator<<(std::ostream &out, const Line &line);
+std::ostream &operator<<(std::ostream &out, const Line &line)
+{
+    out << "<line x1=\"" << line.getX() << "\" y1=\"" << line.getY() << "\" x2=\"" << line.endX << "\" y2=\"" << line.endY << "\" style=\"stroke:" << line.getColour() << "\" />" << std::endl;
+}
 bool pointIsWithinRectangle(int x, int y, const Rectangle &rectangle)
 {
     if (x >= rectangle.getX() &&

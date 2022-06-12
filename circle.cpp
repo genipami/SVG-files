@@ -2,7 +2,10 @@
 #include "circle.hpp"
 
 std::istream &operator>>(std::istream &in, Circle &circle);
-std::ostream &operator<<(std::ostream &out, const Circle &circle);
+std::ostream &operator<<(std::ostream &out, const Circle &circle)
+{
+    out << "<circle cx=\"" << circle.getX() << "\" cy=\"" << circle.getY() << "\" r=\"" << circle.getRadius() << "\" fill=\"" << circle.getColour() << "\" />" << std::endl;
+}
 
 bool Circle::withinRectangle(const Rectangle &rectangle) const
 {
