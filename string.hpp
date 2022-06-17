@@ -14,15 +14,15 @@ private:
 
 public:
     /// Getters for the member variables
-    /// Return the string as a char*
+    /// Returns the string as a char*
     char *getWord() const;
     /// Return the number of characters in the string
     unsigned int getLength() const;
 
     /// Setters for the member variables
-    /// Set the string as a char*
+    /// Sets the string as a char*
     void setWord(const char *word);
-    /// Set the number of characters in the string
+    /// Sets the number of characters in the string
     void setLength(const unsigned int length);
 
     /// Constructors
@@ -57,6 +57,8 @@ public:
     /// Helper function
     /// Checks if a string is a substring of another string. Returns true or false accordingly.
     bool checkSubString(const String &small) const;
+    /// Returns the leftover string after the substring
+    String findSubString(const char*& substring) const;
 
     /// Destructor
     ~String();

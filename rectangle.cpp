@@ -1,7 +1,12 @@
 #include <iostream>
 #include "rectangle.hpp"
 
-std::istream &operator>>(std::istream &in, Rectangle &rectangle);
+std::istream &operator>>(std::istream &in, Rectangle &rectangle)
+{
+    String data;
+    in >> data;
+    
+}
 std::ostream &operator<<(std::ostream &out, const Rectangle &rectangle)
 {
     out<<"<rect x=\""<<rectangle.getX()<<"\" y=\""<<rectangle.getY()<<"\" width=\""<<rectangle.getWidth()<<"\" height=\""<<rectangle.getHeight()<<"\" fill=\""<<rectangle.getColour()<<"\" />"<< std::endl;

@@ -6,7 +6,7 @@ std::ostream &operator<<(std::ostream &out, const Line &line)
 {
     out << "<line x1=\"" << line.getX() << "\" y1=\"" << line.getY() << "\" x2=\"" << line.endX << "\" y2=\"" << line.endY << "\" style=\"stroke:" << line.getColour() << "\" />" << std::endl;
 }
-bool pointIsWithinRectangle(int x, int y, const Rectangle &rectangle)
+bool Line::pointIsWithinRectangle(int x, int y, const Rectangle &rectangle) const
 {
     if (x >= rectangle.getX() &&
         x <= rectangle.getX() + rectangle.getWidth() &&
@@ -16,7 +16,7 @@ bool pointIsWithinRectangle(int x, int y, const Rectangle &rectangle)
     return false;
 }
 
-bool pointIsWithinCircle(int x, int y, const Circle &circle)
+bool Line::pointIsWithinCircle(int x, int y, const Circle &circle) const
 {
     if (distance(x, y, circle.getX(), circle.getY()) <= circle.getRadius())
         return true;

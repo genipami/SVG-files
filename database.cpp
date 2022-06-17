@@ -6,13 +6,13 @@ class Database
 private:
     static const std::size_t INITIAL_CAPACITY = 8;
     static const std::size_t INCREASE_STEP = 2;
-    Shape** database;
+    Shape **database;
     std::size_t size;
     std::size_t capacity;
 
     void resize()
     {
-        Shape** newDatabase = new Shape*[this->capacity * Database::INCREASE_STEP];
+        Shape **newDatabase = new Shape *[this->capacity * Database::INCREASE_STEP];
         for (std::size_t i = 0; i < this->size; ++i)
         {
             newDatabase[i] = this->database[i];
@@ -23,7 +23,7 @@ private:
         this->capacity *= Database::INCREASE_STEP;
     }
 
-    void add(Shape* shape)
+    void add(Shape *shape)
     {
         if (this->size == this->capacity)
         {
@@ -33,16 +33,16 @@ private:
         this->database[this->size++] = shape;
     }
 
-    void copy(const Database& other)
+    void copy(const Database &other)
     {
-        this->database = new Shape*[other.capacity];
-        
+        this->database = new Shape *[other.capacity];
+
         for (std::size_t i = 0; i < other.size; ++i)
         {
 
-            Rectangle* rectanglePtr = dynamic_cast<Rectangle*>(other.database[i]);
-            Circle* circlePtr = dynamic_cast<Circle*>(other.database[i]);
-            Line* linePtr = dynamic_cast<Line*>(other.database[i]);
+            Rectangle *rectanglePtr = dynamic_cast<Rectangle *>(other.database[i]);
+            Circle *circlePtr = dynamic_cast<Circle *>(other.database[i]);
+            Line *linePtr = dynamic_cast<Line *>(other.database[i]);
 
             if (rectanglePtr)
             {
@@ -56,7 +56,6 @@ private:
             {
                 this->database[i] = new Line(*linePtr);
             }
-            
         }
 
         this->capacity = other.capacity;
@@ -73,12 +72,12 @@ private:
     }
 
 public:
-    Database() : database(new Shape*[Database::INITIAL_CAPACITY]), size(0), capacity(Database::INITIAL_CAPACITY) {}
-    Database(const Database& other)
+    Database() : database(new Shape *[Database::INITIAL_CAPACITY]), size(0), capacity(Database::INITIAL_CAPACITY) {}
+    Database(const Database &other)
     {
         this->copy(other);
     }
-    Database& operator = (const Database& other)
+    Database &operator=(const Database &other)
     {
         if (this != &other)
         {
@@ -109,6 +108,20 @@ public:
         this->add(new Line(x, y, colour, endX, endY));
     }
 
+    void remove(const int index)
+    {
+        if (index >= 0 && index < this->size)
+        {
+            if (index != this->size - 1)
+            {
+                this->database[index] = this->database[size - 1];
+            }
+            delete this->database[size - 1];
+            this->database[size - 1] = nullptr;
+            this->size--;
+        }
+    }
+
     void printDatabase() const
     {
         std::size_t j = 0;
@@ -117,5 +130,15 @@ public:
             std::cout << ++j << ".";
             this->database[i]->print();
         }
+    }
+
+    friend std::ostream &operator<<(std::ostream &out, const Database &object)
+    {
+        out << "<?xml version=\"1.0\" standalone=\"no\"?>\n< !DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n< svg >\n";
+        for(std::size_t i = 0; i < object.size-1; i++)
+        {
+            out << object.database[i];
+        }
+        out << "</svg>";
     }
 };

@@ -2,7 +2,6 @@
 #include <cstring>
 #include "string.hpp"
 
-
 char *String::getWord() const
 {
     return this->word;
@@ -122,15 +121,21 @@ std::istream &operator>>(std::istream &in, String &str)
 {
     const unsigned int MAX = 2048; /// The maximun number of characters in a string
     char buffer[MAX];
-    in.getline(buffer, MAX-1);
+    in.getline(buffer, MAX - 1);
     str.setWord(buffer);
     return in;
 }
 
 bool String::checkSubString(const String &small) const
 {
-    if(strstr(this->word, small.word)) return true;
+    if (strstr(this->word, small.word))
+        return true;
     return false;
+}
+
+String String::findSubString(const char*& substring) const
+{
+    return strstr(this->word, substring);
 }
 
 String::~String()
