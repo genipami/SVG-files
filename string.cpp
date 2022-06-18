@@ -60,6 +60,16 @@ String String::operator+(const String &other) const
     return result;
 }
 
+String String::operator+(const char letter) const
+{
+    String result;
+    result.setLength(this->getLength() + 1);
+    result.word = new char[result.getLength() + 1];
+    result.setWord(this->getWord());
+    result.word[result.getLength()] = letter;
+    return result;
+}
+
 String &String::operator+=(const String &other)
 {
     *this = *this + other;
@@ -133,10 +143,35 @@ bool String::checkSubString(const String &small) const
     return false;
 }
 
-String String::findSubString(const char*& substring) const
+String String::findSubString(String substring) const
 {
-    return strstr(this->word, substring);
+    return strstr(this->word, substring.getWord());
 }
+
+String String::findValue(const String& key) const
+{
+    String substring = this->findSubString(key);
+    int i=0;
+    String result;
+    while(substring[i] != '\"')
+    {
+        result = result + substring[i++];
+    }
+    return result;
+}
+
+unsigned int String::findIntValue(const String& key) const
+{
+    String string = this->findValue(key);
+    int i = 0;
+    unsigned int result = 0;
+    while(i<string.getLength())
+    {
+        result = result*10 + (int)(string[i] - '0');
+    }
+    return result;
+}
+
 
 String::~String()
 {

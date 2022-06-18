@@ -38,6 +38,7 @@ public:
     String operator=(const String &other);
     /// Addition operator that concatinates two strings
     String operator+(const String &other) const;
+    String operator+(const char letter) const;
     /// Addition assignment operator that modifies the first value to be the concatination of the two
     String &operator+=(const String &other);
     /// Is equal to operator that returns a bool value
@@ -54,11 +55,15 @@ public:
     friend std::ostream &operator<<(std::ostream &out, const String &str);
     /// Reading operator that supports string
     friend std::istream &operator>>(std::istream &in, String &str);
-    /// Helper function
+    /// Helper functions
     /// Checks if a string is a substring of another string. Returns true or false accordingly.
     bool checkSubString(const String &small) const;
     /// Returns the leftover string after the substring
-    String findSubString(const char*& substring) const;
+    String findSubString(String substring) const;
+    /// Return a string that conains the value in the quotation marks
+    String findValue(const String& key) const;
+    /// Returns an unsigned value that represents the string value in the quotation marks
+    unsigned int findIntValue(const String& key) const;
 
     /// Destructor
     ~String();

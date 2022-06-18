@@ -1,7 +1,18 @@
 #include <iostream>
 #include "circle.hpp"
 
-std::istream &operator>>(std::istream &in, Circle &circle);
+std::istream &operator>>(std::istream &in, Circle &circle)
+{
+    String data;
+    in >> data;
+    unsigned int x = data.findIntValue("cx=\"");
+    unsigned int y = data.findIntValue("cy=\"");
+    unsigned int radius = data.findIntValue("r=\"");
+    String colour = data.findValue("fill=\"");
+    circle = Circle(x, y, colour, radius);
+    return in;
+}
+
 std::ostream &operator<<(std::ostream &out, const Circle &circle)
 {
     out << "<circle cx=\"" << circle.getX() << "\" cy=\"" << circle.getY() << "\" r=\"" << circle.getRadius() << "\" fill=\"" << circle.getColour() << "\" />" << std::endl;

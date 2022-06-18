@@ -11,7 +11,7 @@ private:
 
 public:
     /// Constructor with parameters
-    Rectangle(int x, int y, String colour, int width, int height): Shape(x, y, colour), width(width), height(height){}
+    Rectangle(unsigned int x, unsigned int y, String colour, unsigned int width, unsigned int height): Shape(x, y, colour), width(width), height(height){}
     /// Getter for the width of the rectangle
     unsigned int getWidth() const { return width; }
     /// Getter for the height of the rectangle
