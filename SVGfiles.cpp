@@ -206,14 +206,17 @@ namespace SVG
         if (data[1] == "rectangle")
         {
             container.addRectangle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
+            createdRectangle();
         }
         else if (data[1] == "circle")
         {
             container.addCircle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), data[5]);
+            createdCircle();
         }
         else if (data[1] == "line")
         {
             container.addLine(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
+            createdLine();
         }
     }
 
