@@ -64,6 +64,9 @@ public:
     String findValue(const String& key) const;
     /// Returns an unsigned value that represents the string value in the quotation marks
     unsigned int findIntValue(const String& key) const;
+    static unsigned int stringToInt(const String& string);
+    ///Not mine either...Modified to work with my string class
+    String String::GetSubString(const unsigned int i, const unsigned int j);
 
     /// Destructor
     ~String();

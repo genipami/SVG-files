@@ -29,6 +29,14 @@ private:
     void deallocate();
 
 public:
+    std::size_t getSize() const
+    {
+        return this->size;
+    }
+    Shape **getShapes() const
+    {
+        return this->shapes;
+    }
     /// Default constructor
     Container() : shapes(new Shape *[Container::INITIAL_CAPACITY]), size(0), capacity(Container::INITIAL_CAPACITY) {}
     /// Copy constructor

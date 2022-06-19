@@ -153,7 +153,7 @@ String String::findValue(const String& key) const
     String substring = this->findSubString(key);
     int i=0;
     String result;
-    while(substring[i] != '\"')
+    while(substring[i] != '\"' || substring[i] != ' ')
     {
         result = result + substring[i++];
     }
@@ -163,6 +163,11 @@ String String::findValue(const String& key) const
 unsigned int String::findIntValue(const String& key) const
 {
     String string = this->findValue(key);
+    return stringToInt(string);
+}
+
+unsigned int String::stringToInt(const String& string)
+{
     int i = 0;
     unsigned int result = 0;
     while(i<string.getLength())
@@ -170,6 +175,21 @@ unsigned int String::findIntValue(const String& key) const
         result = result*10 + (int)(string[i] - '0');
     }
     return result;
+}
+
+String String::GetSubString(const unsigned int i, const unsigned int j)
+{
+	if (i > this->length || j > this->length)
+	{
+		std::cout << "Something went wrong!" << std::endl;
+		return "";
+	}
+
+	char delim = this->word[j];
+	this->word[j] = '\0';
+	String copy(this->word + i);
+	this->word[j] = delim;
+	return copy;
 }
 
 
