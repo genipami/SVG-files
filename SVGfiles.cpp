@@ -6,6 +6,137 @@ using namespace Messages;
 
 namespace SVG
 {
+    void writeFile(const Container &container, const String &filename)
+    {
+        std::ofstream output(filename.getWord(), std::ios::trunc);
+
+        if (!output.is_open())
+        {
+            std::cout << "Problem with file!" << std::endl;
+            return;
+        }
+        output << container;
+        output.close();
+    }
+
+    void readFile(Container &container, const String &filename)
+    {
+        std::ifstream data(filename.getWord());
+        if (!(data.is_open()))
+        {
+            problem();
+            return;
+        }
+        data >> container;
+        data.close();
+    }
+
+    void printAll(const Container &container)
+    {
+        for (int i = 0; i < container.getSize(); i++)
+        {
+            container.getShapes()[i]->print();
+        }
+    }
+
+    void translateAll(const Container &container, int vertical, int horizontal)
+    {
+        for (int i = 0; i < container.getSize(); i++)
+        {
+            container.getShapes()[i]->translate(vertical, horizontal);
+        }
+    }
+
+    void translateOne(const Container &container, int vertical, int horizontal, unsigned int index)
+    {
+        container.getShapes()[index]->translate(vertical, horizontal);
+    }
+
+    Vector<String> GetCommand(String &command_line)
+    {
+        unsigned int i = 0, j;
+        unsigned int size = command_line.getLength();
+        Vector<String> command;
+        while (i < size)
+        {
+            while ((command_line[i] == '\t' || command_line[i] == ' ') && i < size)
+            {
+                i++;
+            }
+            j = i;
+            while (command_line[i] != '\t' && command_line[i] != ' ' && i < size)
+            {
+                i++;
+            }
+            command.Add(command_line.GetSubString(j, i));
+        }
+
+        return command;
+    }
+
+    void create(Container &container, String &input)
+    {
+        Vector<String> data = GetCommand(input);
+        if (data[1] == "rectangle")
+        {
+            container.addRectangle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
+            createdRectangle();
+        }
+        else if (data[1] == "circle")
+        {
+            container.addCircle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), data[5]);
+            createdCircle();
+        }
+        else if (data[1] == "line")
+        {
+            container.addLine(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
+            createdLine();
+        }
+    }
+
+    void within(const Container &container, String &input)
+    {
+        Vector<String> data = GetCommand(input);
+        if (data[1] == "rectangle")
+        {
+            Rectangle rectangle(String::stringToInt(data[2]), String::stringToInt(data[3]), data[6], String::stringToInt(data[4]), String::stringToInt(data[5]));
+            unsigned int counter = 0;
+            for (int i = 0; i < container.getSize(); ++i)
+            {
+                if (container.getShapes()[i]->withinRectangle(rectangle.getX(), rectangle.getY(), rectangle.getWidth(), rectangle.getHeight()))
+                {
+                    counter++;
+                    std::cout << counter << ". ";
+                    container.getShapes()[i]->print();
+                }
+            }
+            if (counter == 0)
+            {
+                noFigures();
+                rectangle.print();
+            }
+        }
+        else if (data[1] == "circle")
+        {
+            Circle circle(String::stringToInt(data[2]), String::stringToInt(data[3]), data[5], String::stringToInt(data[4]));
+            unsigned int counter = 0;
+            for (int i = 0; i < container.getSize(); ++i)
+            {
+                if (container.getShapes()[i]->withinCircle(circle.getX(), circle.getY(), circle.getRadius()))
+                {
+                    counter++;
+                    std::cout << counter << ". ";
+                    container.getShapes()[i]->print();
+                }
+            }
+            if (counter == 0)
+            {
+                noFigures();
+                circle.print();
+            }
+        }
+    }
+    
     void start()
     {
         Container container;
@@ -132,134 +263,5 @@ namespace SVG
         }
     }
 
-    void writeFile(const Container &container, const String &filename)
-    {
-        std::ofstream output(filename.getWord(), std::ios::trunc);
-
-        if (!output.is_open())
-        {
-            std::cout << "Problem with file!" << std::endl;
-            return;
-        }
-        output << container;
-        output.close();
-    }
-
-    void readFile(Container &container, const String &filename)
-    {
-        std::ifstream data(filename.getWord());
-        if (!(data.is_open()))
-        {
-            problem();
-            return;
-        }
-        data >> container;
-        data.close();
-    }
-
-    void printAll(const Container &container)
-    {
-        for (int i = 0; i < container.getSize(); i++)
-        {
-            container.getShapes()[i]->print();
-        }
-    }
-
-    void translateAll(const Container &container, int vertical, int horizontal)
-    {
-        for (int i = 0; i < container.getSize(); i++)
-        {
-            container.getShapes()[i]->translate(vertical, horizontal);
-        }
-    }
-
-    void translateOne(const Container &container, int vertical, int horizontal, unsigned int index)
-    {
-        container.getShapes()[index]->translate(vertical, horizontal);
-    }
-
-    Vector<String> GetCommand(String &command_line)
-    {
-        unsigned int i = 0, j;
-        unsigned int size = command_line.getLength();
-        Vector<String> command;
-        while (i < size)
-        {
-            while ((command_line[i] == '\t' || command_line[i] == ' ') && i < size)
-            {
-                i++;
-            }
-            j = i;
-            while (command_line[i] != '\t' && command_line[i] != ' ' && i < size)
-            {
-                i++;
-            }
-            command.Add(command_line.GetSubString(j, i));
-        }
-
-        return command;
-    }
-
-    void create(Container &container, String &input)
-    {
-        Vector<String> data = GetCommand(input);
-        if (data[1] == "rectangle")
-        {
-            container.addRectangle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
-            createdRectangle();
-        }
-        else if (data[1] == "circle")
-        {
-            container.addCircle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), data[5]);
-            createdCircle();
-        }
-        else if (data[1] == "line")
-        {
-            container.addLine(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
-            createdLine();
-        }
-    }
-
-    void within(const Container &container, String &input)
-    {
-        Vector<String> data = GetCommand(input);
-        if (data[1] == "rectangle")
-        {
-            Rectangle rectangle(String::stringToInt(data[2]), String::stringToInt(data[3]), data[6], String::stringToInt(data[4]), String::stringToInt(data[5]));
-            unsigned int counter = 0;
-            for (int i = 0; i < container.getSize(); ++i)
-            {
-                if (container.getShapes()[i]->withinRectangle(rectangle))
-                {
-                    counter++;
-                    std::cout << counter << ". ";
-                    container.getShapes()[i]->print();
-                }
-            }
-            if (counter == 0)
-            {
-                noFigures();
-                rectangle.print();
-            }
-        }
-        else if (data[1] == "circle")
-        {
-            Circle circle(String::stringToInt(data[2]), String::stringToInt(data[3]), data[5], String::stringToInt(data[4]));
-            unsigned int counter = 0;
-            for (int i = 0; i < container.getSize(); ++i)
-            {
-                if (container.getShapes()[i]->withinCircle(circle))
-                {
-                    counter++;
-                    std::cout << counter << ". ";
-                    container.getShapes()[i]->print();
-                }
-            }
-            if (counter == 0)
-            {
-                noFigures();
-                circle.print();
-            }
-        }
-    }
+    
 }

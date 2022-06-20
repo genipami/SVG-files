@@ -1,8 +1,8 @@
-#ifndef __CONTAINER_HPP
-#define __CONTAINER_HPP
+#pragma once
 #include "rectangle.hpp"
 #include "circle.hpp"
-#include "line.hpp"
+#include "line.cpp"
+
 
 static const String OPENING_TAG = "<?xml version=\"1.0\" standalone=\"no\"?>\n< !DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n\"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n< svg >\n";
 static const String CLOSING_TAG = "</svg>";
@@ -71,4 +71,3 @@ public:
     friend std::istream &operator>>(std::istream &in, Container &container);
 };
 
-#endif

@@ -119,6 +119,7 @@ std::ostream &operator<<(std::ostream &out, const Container &container)
         out << container.shapes[i];
     }
     out << CLOSING_TAG;
+    return out;
 }
 
 std::istream &operator>>(std::istream &in, Container &container)

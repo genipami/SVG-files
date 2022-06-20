@@ -1,5 +1,4 @@
-#ifndef __STRING_HPP
-#define __STRING_HPP
+#pragma once
 #include <iostream>
 
 /// Realization of the standard string class
@@ -66,10 +65,8 @@ public:
     unsigned int findIntValue(const String& key) const;
     static unsigned int stringToInt(const String& string);
     ///Not mine either...Modified to work with my string class
-    String String::GetSubString(const unsigned int i, const unsigned int j);
+    String GetSubString(const unsigned int i, const unsigned int j);
 
     /// Destructor
     ~String();
 };
-
-#endif

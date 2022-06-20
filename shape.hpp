@@ -1,9 +1,7 @@
-#ifndef __SHAPE_HPP
-#define __SHAPE_HPP
+#pragma once
 #include <iostream>
 #include <cmath>
 #include "string.hpp"
-#include "rectangle.hpp"
 
 class Shape
 {
@@ -39,9 +37,9 @@ public:
     }
 
     /// Pure virtual method that retuns a bool value of 1 if the shape is withing the specified rectangle and 0 otherwise
-    virtual bool withinRectangle(const Rectangle &rectangle) const = 0;
+    virtual bool withinRectangle(unsigned int x, unsigned int y, unsigned int width, unsigned int height) const = 0;
     /// Pure virtual method that retuns a bool value of 1 if the shape is withing the specified circle and 0 otherwise
-    virtual bool withinCircle(const Circle &circle) const = 0;
+    virtual bool withinCircle(unsigned int cx, unsigned int cy, unsigned int r) const = 0;
     /// Pure virtual method that prints the information about the shape
     virtual void print() const = 0;
 
@@ -54,5 +52,3 @@ public:
         return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
     }
 };
-
-#endif

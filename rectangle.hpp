@@ -1,5 +1,4 @@
-#ifndef __RECTANGLE_HPP
-#define __RECTANGLE_HPP
+#pragma once
 #include "shape.hpp"
 #include "circle.hpp"
 
@@ -21,13 +20,12 @@ public:
     /// Redefinition for the printing operator
     friend std::ostream& operator<<(std::ostream &out, const Rectangle& rectangle);
     /// Overriging of the withinRectangle method for a rectangle
-    virtual bool withinRectangle(const Rectangle &rectangle) const override;
+    virtual bool withinRectangle(unsigned int x, unsigned int y, unsigned int width, unsigned int height) const override;
     /// Overriging of the withinCircle method for a rectangle
-    virtual bool withinCircle(const Circle &circle) const override;
+    virtual bool withinCircle(unsigned int cx, unsigned int cy, unsigned int r) const override;
     /// Overriging of the printing method for a rectangle
     virtual void print() const override;
     /// Virtual destructor
     virtual ~Rectangle() = default;
 };
 
-#endif

@@ -18,21 +18,22 @@ std::istream &operator>>(std::istream &in, Rectangle &rectangle)
 std::ostream &operator<<(std::ostream &out, const Rectangle &rectangle)
 {
     out<<"<rect x=\""<<rectangle.getX()<<"\" y=\""<<rectangle.getY()<<"\" width=\""<<rectangle.getWidth()<<"\" height=\""<<rectangle.getHeight()<<"\" fill=\""<<rectangle.getColour()<<"\" />"<< std::endl;
+    return out;
 }
 
-bool Rectangle::withinRectangle(const Rectangle &rectangle) const
+bool Rectangle::withinRectangle(unsigned int x, unsigned int y, unsigned int width, unsigned int height) const
 {
-    if (this->getX() <= rectangle.getX() && this->getY() <= rectangle.getY() && this->getX() + this->width >= rectangle.getX() + rectangle.width && this->getY() + this->height >= rectangle.getY() + rectangle.height)
+    if (this->getX() <= x && this->getY() <= y && this->getX() + this->width >= x + width && this->getY() + this->height >= y + height)
         return true;
 
     return false;
 }
-bool Rectangle::withinCircle(const Circle &circle) const
+bool Rectangle::withinCircle(unsigned int cx, unsigned int cy, unsigned int r) const
 {
-    if (distance(this->getX(), this->getY(), circle.getX(), circle.getY()) < circle.getRadius() &&
-        distance(this->getX() + this->width, this->getY(), circle.getX(), circle.getY()) < circle.getRadius() &&
-        distance(this->getX(), this->getY() + this->height, circle.getX(), circle.getY()) < circle.getRadius() &&
-        distance(this->getX() + this->width, this->getY() + this->height, circle.getX(), circle.getY()) < circle.getRadius())
+    if (distance(this->getX(), this->getY(), cx, cy) < r &&
+        distance(this->getX() + this->width, this->getY(), cx, cy) < r &&
+        distance(this->getX(), this->getY() + this->height, cx, cy) < r &&
+        distance(this->getX() + this->width, this->getY() + this->height, cx, cy) < r)
         return true;
 
     return false;

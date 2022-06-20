@@ -1,5 +1,4 @@
-#ifndef __LINE_HPP
-#define __LINE_HPP
+#pragma once
 #include "shape.hpp"
 #include "rectangle.hpp"
 #include "circle.hpp"
@@ -18,13 +17,13 @@ public:
     /// Redefinition of the printing operator
     friend std::ostream& operator<<(std::ostream &out, const Line& line);
     /// Helper method that returns a bool value of 1 if the point is within the rectangle and 0 otherwise
-    bool pointIsWithinRectangle(int x, int y, const Rectangle &rectangle) const; 
+    bool pointIsWithinRectangle(int x, int y, unsigned int rectX, unsigned int rectY, unsigned int width, unsigned int height) const; 
     /// Helper method that returns a bool value of 1 if the point is within the circle and 0 otherwise
-    bool pointIsWithinCircle(int x, int y, const Circle &circle) const;
+    bool pointIsWithinCircle(int x, int y, unsigned int cx, unsigned int cy, unsigned int r) const;
     /// Overriding of the withinRectanle method for a line
-    virtual bool withinRectangle(const Rectangle &rectangle) const override;
-    /// Overriding of the withinCircle method for a line
-    virtual bool withinCircle(const Circle &circle) const override;
+    virtual bool withinRectangle(unsigned int x, unsigned int y, unsigned int width, unsigned int height) const override;
+    /// Overriding of the withinCircle method for ae line
+    virtual bool withinCircle(unsigned int cx, unsigned int cy, unsigned int r) const override;
     /// Overiding of the printing method for a line
     virtual void print()const override;
     /// Overriding of the translate method for a line
@@ -32,4 +31,3 @@ public:
     /// Virtual destructor
     virtual ~Line() = default;
 };
-#endif
