@@ -1,0 +1,4 @@
+<map id="Line::pointIsWithinRectangle" name="Line::pointIsWithinRectangle">
+<area shape="rect" id="node1" title="Helper method that returns a bool value of 1 if the point is within the rectangle and 0 otherwise." alt="" coords="199,5,385,32"/>
+<area shape="rect" id="node2" href="$class_line.html#a4c0f9f299d225412c67db9eb82a2676a" title="Overriding of the withinRectanle method for a line." alt="" coords="5,5,151,32"/>
+</map>

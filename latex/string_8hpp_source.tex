@@ -1,0 +1,47 @@
+\hypertarget{string_8hpp_source}{}\doxysection{string.\+hpp}
+\mbox{\hyperlink{string_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_string}{String}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{private}:}
+\DoxyCodeLine{9     \textcolor{keywordtype}{char} *word;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{char} *\mbox{\hyperlink{class_string_a9e577b0a17f583835973b7ead2e0148d}{getWord}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_string_abc30fdd72adc7aee74bfb70d45c651a6}{getLength}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_string_a78995a5095f5a35f665110b36f0e4ff0}{setWord}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *word);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_string_ad8124c3f1a4cd449ebdf59b4d4271101}{setLength}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_string_a8a7ef356e05eb9b1ea1ab518baee3095}{String}}();}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_string_a8a7ef356e05eb9b1ea1ab518baee3095}{String}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *word);}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_string_a8a7ef356e05eb9b1ea1ab518baee3095}{String}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} letter);}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_string_a8a7ef356e05eb9b1ea1ab518baee3095}{String}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{38     \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_string_a8d4a1cbebf054d8340d6c8e1efc98d13}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other);}
+\DoxyCodeLine{40     \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_string_ac094f267da5e0cdc7559bb1fa163f650}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other) \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \mbox{\hyperlink{class_string}{String}} \&\mbox{\hyperlink{class_string_ab84728b14cac3bc213351c8ae8fb3364}{operator+=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_string_a3833f844a743166a7b9ad3d762aa3e5d}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other) \textcolor{keyword}{const};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_string_ab72b23ee7dda1cb075cce5b6b27e083a}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other) \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_string_a50d0915591f7c91fae7bb856b31061c3}{operator>}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&other) \textcolor{keyword}{const};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{char} \&\mbox{\hyperlink{class_string_ac4326ac715bd4068d6c516209b482d29}{operator[]}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{52     \textcolor{keyword}{const} \textcolor{keywordtype}{char} \&\mbox{\hyperlink{class_string_ac4326ac715bd4068d6c516209b482d29}{operator[]}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index) \textcolor{keyword}{const};}
+\DoxyCodeLine{54     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_string_ae7d3addff502747e76adb2e6c7f1c815}{operator<<}}(std::ostream \&out, \textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&str);}
+\DoxyCodeLine{56     \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_string_a8e6f6efe4735bdfcffce6623efd861c5}{operator>>}}(std::istream \&in, \mbox{\hyperlink{class_string}{String}} \&str);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_string_a7ae2c0a8db68882b4719111e71ac1e7c}{checkSubString}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&small) \textcolor{keyword}{const};}
+\DoxyCodeLine{61     \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_string_ac6db068779d9d5cad9fb9e188fd6865b}{findSecondPart}}(\mbox{\hyperlink{class_string}{String}} substring) \textcolor{keyword}{const};}
+\DoxyCodeLine{63     \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_string_a61b1403880b10d50b93c0f58642d2ad9}{findValue}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}}\& key) \textcolor{keyword}{const};}
+\DoxyCodeLine{65     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_string_a6443ebdce8281546f1362f14655813e0}{findIntValue}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}}\& key) \textcolor{keyword}{const};}
+\DoxyCodeLine{66     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_string_a5f06420cfb34ac1a3bcbd9ac55e4f8b1}{stringToInt}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}}\& \textcolor{keywordtype}{string});}
+\DoxyCodeLine{68     \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_string_ac88bc91cfb525fbc492fd9331a874425}{GetSubString}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} j);}
+\DoxyCodeLine{69     }
+\DoxyCodeLine{70 }
+\DoxyCodeLine{72     \mbox{\hyperlink{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}{\string~String}}();}
+\DoxyCodeLine{73 \};}
+
+\end{DoxyCode}

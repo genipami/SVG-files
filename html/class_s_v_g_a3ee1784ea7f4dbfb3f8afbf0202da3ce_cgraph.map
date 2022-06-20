@@ -1,0 +1,14 @@
+<map id="SVG::create" name="SVG::create">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,100,209"/>
+<area shape="rect" id="node2" href="$class_container.html#ab07884fa459dd5a409dcfe1c04f5139e" title="Adding method for a circle." alt="" coords="174,5,313,32"/>
+<area shape="rect" id="node3" href="$class_container.html#a9ab173f267f44c482f125f42a035ef91" title="Adding method for a line." alt="" coords="178,56,309,83"/>
+<area shape="rect" id="node4" href="$class_container.html#a5a80f6459f91aac4f9cee005d8745f88" title="Adding method for a rectangle." alt="" coords="161,107,325,133"/>
+<area shape="rect" id="node5" href="$class_messages.html#ab37b5b00b260445cecc23aa8bbe6fa96" title=" " alt="" coords="160,157,327,184"/>
+<area shape="rect" id="node6" href="$class_messages.html#ab6d1df732b760ba75f11e024334132bd" title=" " alt="" coords="165,208,322,235"/>
+<area shape="rect" id="node7" href="$class_messages.html#a723884ce8998aa2eb4c4d21d985963e3" title=" " alt="" coords="148,259,339,285"/>
+<area shape="rect" id="node8" href="$class_s_v_g.html#affcd7aaeb3cd17c75ac331bc8dca1d0e" title=" " alt="" coords="174,309,313,336"/>
+<area shape="rect" id="node12" href="$class_string.html#a5f06420cfb34ac1a3bcbd9ac55e4f8b1" title=" " alt="" coords="181,360,305,387"/>
+<area shape="rect" id="node9" href="$class_vector.html#ae89e86c682b9080f5dc463ab8569c323" title=" " alt="" coords="413,259,503,285"/>
+<area shape="rect" id="node10" href="$class_string.html#abc30fdd72adc7aee74bfb70d45c651a6" title="Return the number of characters in the string." alt="" coords="397,360,519,387"/>
+<area shape="rect" id="node11" href="$class_string.html#ac88bc91cfb525fbc492fd9331a874425" title="Not mine either...Modified to work with my string class." alt="" coords="387,309,529,336"/>
+</map>

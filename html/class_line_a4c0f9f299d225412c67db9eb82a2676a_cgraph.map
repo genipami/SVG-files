@@ -1,0 +1,6 @@
+<map id="Line::withinRectangle" name="Line::withinRectangle">
+<area shape="rect" id="node1" title="Overriding of the withinRectanle method for a line." alt="" coords="5,56,151,83"/>
+<area shape="rect" id="node2" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="246,5,338,32"/>
+<area shape="rect" id="node3" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="245,56,339,83"/>
+<area shape="rect" id="node4" href="$class_line.html#a2c2403198247d38b50b5b4e7c6f27bee" title="Helper method that returns a bool value of 1 if the point is within the rectangle and 0 otherwise." alt="" coords="199,107,385,133"/>
+</map>

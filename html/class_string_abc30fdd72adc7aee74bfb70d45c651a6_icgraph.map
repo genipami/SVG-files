@@ -1,0 +1,17 @@
+<map id="String::getLength" name="String::getLength">
+<area shape="rect" id="node1" title="Return the number of characters in the string." alt="" coords="801,213,923,239"/>
+<area shape="rect" id="node2" href="$class_string.html#ac6db068779d9d5cad9fb9e188fd6865b" title="Returns the leftover string after the substring." alt="" coords="601,35,753,62"/>
+<area shape="rect" id="node7" href="$class_s_v_g.html#affcd7aaeb3cd17c75ac331bc8dca1d0e" title=" " alt="" coords="415,137,553,163"/>
+<area shape="rect" id="node10" href="$class_string.html#ac094f267da5e0cdc7559bb1fa163f650" title="Addition operator that concatinates two strings." alt="" coords="618,187,737,214"/>
+<area shape="rect" id="node11" href="$class_string.html#ab72b23ee7dda1cb075cce5b6b27e083a" title="Is less than operator that returns a bool value." alt="" coords="618,238,737,265"/>
+<area shape="rect" id="node12" href="$class_string.html#a8d4a1cbebf054d8340d6c8e1efc98d13" title=" " alt="" coords="618,289,737,315"/>
+<area shape="rect" id="node13" href="$class_string.html#a3833f844a743166a7b9ad3d762aa3e5d" title="Is equal to operator that returns a bool value." alt="" coords="614,339,741,366"/>
+<area shape="rect" id="node14" href="$class_string.html#a8a7ef356e05eb9b1ea1ab518baee3095" title=" " alt="" coords="628,390,727,417"/>
+<area shape="rect" id="node15" href="$class_string.html#a5f06420cfb34ac1a3bcbd9ac55e4f8b1" title=" " alt="" coords="422,86,546,113"/>
+<area shape="rect" id="node3" href="$class_string.html#a61b1403880b10d50b93c0f58642d2ad9" title="Return a string that conains the value in the quotation marks." alt="" coords="425,35,543,62"/>
+<area shape="rect" id="node5" href="$class_s_v_g.html#a2f5e7271f4d2d05cc54fb4891775a383" title=" " alt="" coords="104,61,188,87"/>
+<area shape="rect" id="node4" href="$class_string.html#a6443ebdce8281546f1362f14655813e0" title="Returns an unsigned value that represents the string value in the quotation marks." alt="" coords="236,35,367,62"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,61,56,87"/>
+<area shape="rect" id="node8" href="$class_s_v_g.html#a3ee1784ea7f4dbfb3f8afbf0202da3ce" title=" " alt="" coords="254,86,349,113"/>
+<area shape="rect" id="node9" href="$class_s_v_g.html#acd7f9c4e29b106a80bc25ae94aba70de" title=" " alt="" coords="256,137,347,163"/>
+</map>

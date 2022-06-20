@@ -29,6 +29,7 @@ public:
     String();
     /// The constructor with parameters
     String(const char *word);
+    String(const char letter);
     /// The copy constructor
     String(const String &other);
 
@@ -37,7 +38,6 @@ public:
     String operator=(const String &other);
     /// Addition operator that concatinates two strings
     String operator+(const String &other) const;
-    String operator+(const char letter) const;
     /// Addition assignment operator that modifies the first value to be the concatination of the two
     String &operator+=(const String &other);
     /// Is equal to operator that returns a bool value
@@ -58,7 +58,7 @@ public:
     /// Checks if a string is a substring of another string. Returns true or false accordingly.
     bool checkSubString(const String &small) const;
     /// Returns the leftover string after the substring
-    String findSubString(String substring) const;
+    String findSecondPart(String substring) const;
     /// Return a string that conains the value in the quotation marks
     String findValue(const String& key) const;
     /// Returns an unsigned value that represents the string value in the quotation marks
@@ -66,6 +66,7 @@ public:
     static unsigned int stringToInt(const String& string);
     ///Not mine either...Modified to work with my string class
     String GetSubString(const unsigned int i, const unsigned int j);
+    
 
     /// Destructor
     ~String();

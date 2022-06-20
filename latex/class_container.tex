@@ -1,0 +1,231 @@
+\hypertarget{class_container}{}\doxysection{Container Class Reference}
+\label{class_container}\index{Container@{Container}}
+
+
+{\ttfamily \#include $<$container.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_container_a27a8f724ba3c81de4935eb775dca878d}{get\+Size}} () const
+\item 
+\mbox{\hyperlink{class_shape}{Shape}} $\ast$$\ast$ \mbox{\hyperlink{class_container_a0c9d704d14f6fe09cfdf5bedc1ca870d}{get\+Shapes}} () const
+\item 
+\mbox{\hyperlink{class_container_a1b0c5515d6863c1bc98cc93b65952f42}{Container}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_container_a4e738bfa634f64636a556b0556155a17}{Container}} (const \mbox{\hyperlink{class_container}{Container}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_container}{Container}} \& \mbox{\hyperlink{class_container_adc42a6f0a2155a5cf2459685e2d0fc3a}{operator=}} (const \mbox{\hyperlink{class_container}{Container}} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_container_ae9f5d07bfc3defda274aa06091c19f56}{$\sim$\+Container}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_a5a80f6459f91aac4f9cee005d8745f88}{add\+Rectangle}} (const unsigned int x, const unsigned int y, const unsigned int width, const unsigned int height, \mbox{\hyperlink{class_string}{String}} colour)
+\begin{DoxyCompactList}\small\item\em Adding method for a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_ab07884fa459dd5a409dcfe1c04f5139e}{add\+Circle}} (const unsigned int x, const unsigned int y, const unsigned int radius, \mbox{\hyperlink{class_string}{String}} colour)
+\begin{DoxyCompactList}\small\item\em Adding method for a circle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_a9ab173f267f44c482f125f42a035ef91}{add\+Line}} (const unsigned int x, const unsigned int y, const unsigned int endX, const unsigned int endY, \mbox{\hyperlink{class_string}{String}} colour)
+\begin{DoxyCompactList}\small\item\em Adding method for a line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_a654c1a1644c9ed136906c4b88fa1c299}{remove}} (std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Method that remoes a shape at a given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_container_a9e75f5f9d13f2346ad62fc57a87c08cf}{print\+Shapes}} () const
+\begin{DoxyCompactList}\small\item\em Method that prints all the shapes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_container_a23b65dfe9ffda24dc8051f6120d5d8e1}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_container}{Container}} \&container)
+\begin{DoxyCompactList}\small\item\em Redefinition of the printing operator for a shape container. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_container_a2ccbad631378939de5d952a5fe007390}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_container}{Container}} \&container)
+\begin{DoxyCompactList}\small\item\em Redefinition of the reading operator for a shape container. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_container_a1b0c5515d6863c1bc98cc93b65952f42}\label{class_container_a1b0c5515d6863c1bc98cc93b65952f42}} 
+\index{Container@{Container}!Container@{Container}}
+\index{Container@{Container}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{Container()}{Container()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Container\+::\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_container_a4e738bfa634f64636a556b0556155a17}\label{class_container_a4e738bfa634f64636a556b0556155a17}} 
+\index{Container@{Container}!Container@{Container}}
+\index{Container@{Container}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{Container()}{Container()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Container\+::\+Container (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_container}{Container}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+\mbox{\Hypertarget{class_container_ae9f5d07bfc3defda274aa06091c19f56}\label{class_container_ae9f5d07bfc3defda274aa06091c19f56}} 
+\index{Container@{Container}!````~Container@{$\sim$Container}}
+\index{````~Container@{$\sim$Container}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{$\sim$Container()}{~Container()}}
+{\footnotesize\ttfamily Container\+::$\sim$\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_container_ab07884fa459dd5a409dcfe1c04f5139e}\label{class_container_ab07884fa459dd5a409dcfe1c04f5139e}} 
+\index{Container@{Container}!addCircle@{addCircle}}
+\index{addCircle@{addCircle}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{addCircle()}{addCircle()}}
+{\footnotesize\ttfamily void Container\+::add\+Circle (\begin{DoxyParamCaption}\item[{const unsigned int}]{x,  }\item[{const unsigned int}]{y,  }\item[{const unsigned int}]{radius,  }\item[{\mbox{\hyperlink{class_string}{String}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Adding method for a circle. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_container_ab07884fa459dd5a409dcfe1c04f5139e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_container_a9ab173f267f44c482f125f42a035ef91}\label{class_container_a9ab173f267f44c482f125f42a035ef91}} 
+\index{Container@{Container}!addLine@{addLine}}
+\index{addLine@{addLine}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{addLine()}{addLine()}}
+{\footnotesize\ttfamily void Container\+::add\+Line (\begin{DoxyParamCaption}\item[{const unsigned int}]{x,  }\item[{const unsigned int}]{y,  }\item[{const unsigned int}]{endX,  }\item[{const unsigned int}]{endY,  }\item[{\mbox{\hyperlink{class_string}{String}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Adding method for a line. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_container_a9ab173f267f44c482f125f42a035ef91_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_container_a5a80f6459f91aac4f9cee005d8745f88}\label{class_container_a5a80f6459f91aac4f9cee005d8745f88}} 
+\index{Container@{Container}!addRectangle@{addRectangle}}
+\index{addRectangle@{addRectangle}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{addRectangle()}{addRectangle()}}
+{\footnotesize\ttfamily void Container\+::add\+Rectangle (\begin{DoxyParamCaption}\item[{const unsigned int}]{x,  }\item[{const unsigned int}]{y,  }\item[{const unsigned int}]{width,  }\item[{const unsigned int}]{height,  }\item[{\mbox{\hyperlink{class_string}{String}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Adding method for a rectangle. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_container_a5a80f6459f91aac4f9cee005d8745f88_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_container_a0c9d704d14f6fe09cfdf5bedc1ca870d}\label{class_container_a0c9d704d14f6fe09cfdf5bedc1ca870d}} 
+\index{Container@{Container}!getShapes@{getShapes}}
+\index{getShapes@{getShapes}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{getShapes()}{getShapes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_shape}{Shape}} $\ast$$\ast$ Container\+::get\+Shapes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_container_a0c9d704d14f6fe09cfdf5bedc1ca870d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_container_a27a8f724ba3c81de4935eb775dca878d}\label{class_container_a27a8f724ba3c81de4935eb775dca878d}} 
+\index{Container@{Container}!getSize@{getSize}}
+\index{getSize@{getSize}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Container\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_container_a27a8f724ba3c81de4935eb775dca878d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_container_adc42a6f0a2155a5cf2459685e2d0fc3a}\label{class_container_adc42a6f0a2155a5cf2459685e2d0fc3a}} 
+\index{Container@{Container}!operator=@{operator=}}
+\index{operator=@{operator=}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_container}{Container}} \& Container\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_container}{Container}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+\mbox{\Hypertarget{class_container_a9e75f5f9d13f2346ad62fc57a87c08cf}\label{class_container_a9e75f5f9d13f2346ad62fc57a87c08cf}} 
+\index{Container@{Container}!printShapes@{printShapes}}
+\index{printShapes@{printShapes}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{printShapes()}{printShapes()}}
+{\footnotesize\ttfamily void Container\+::print\+Shapes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method that prints all the shapes. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{class_container_a9e75f5f9d13f2346ad62fc57a87c08cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_container_a654c1a1644c9ed136906c4b88fa1c299}\label{class_container_a654c1a1644c9ed136906c4b88fa1c299}} 
+\index{Container@{Container}!remove@{remove}}
+\index{remove@{remove}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Container\+::remove (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Method that remoes a shape at a given index. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_container_a654c1a1644c9ed136906c4b88fa1c299_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_container_a23b65dfe9ffda24dc8051f6120d5d8e1}\label{class_container_a23b65dfe9ffda24dc8051f6120d5d8e1}} 
+\index{Container@{Container}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_container}{Container}} \&}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Redefinition of the printing operator for a shape container. 
+
+\mbox{\Hypertarget{class_container_a2ccbad631378939de5d952a5fe007390}\label{class_container_a2ccbad631378939de5d952a5fe007390}} 
+\index{Container@{Container}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Container@{Container}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_container}{Container}} \&}]{container }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Redefinition of the reading operator for a shape container. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{container_8hpp}{container.\+hpp}}\item 
+\mbox{\hyperlink{container_8cpp}{container.\+cpp}}\end{DoxyCompactItemize}

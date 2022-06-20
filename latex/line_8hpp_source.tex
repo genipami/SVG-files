@@ -1,0 +1,26 @@
+\hypertarget{line_8hpp_source}{}\doxysection{line.\+hpp}
+\mbox{\hyperlink{line_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8hpp}{rectangle.hpp}}"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_line}{Line}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} endX;}
+\DoxyCodeLine{8     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} endY;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_line_a994762553d3e6f9fe0804c31bd116690}{Line}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \mbox{\hyperlink{class_string}{String}} colour, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} endX, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} endY): \mbox{\hyperlink{class_shape}{Shape}}(x, y, colour), endX(x), endY(y)\{\}}
+\DoxyCodeLine{14     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{class_line_a5e92f131e0ac9a1544405842db2c05d1}{operator>>}}(std::istream \&in, \mbox{\hyperlink{class_line}{Line}}\& line);}
+\DoxyCodeLine{16     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_line_aad4d43dd686b8d7ac10a5f91c833211f}{operator<<}}(std::ostream \&out, \textcolor{keyword}{const} \mbox{\hyperlink{class_line}{Line}}\& line);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_line_a2c2403198247d38b50b5b4e7c6f27bee}{pointIsWithinRectangle}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rectX, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} rectY, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height) \textcolor{keyword}{const}; }
+\DoxyCodeLine{20     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_line_a78012779d3006aa6891cc1309dbac568}{pointIsWithinCircle}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r) \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_line_a4c0f9f299d225412c67db9eb82a2676a}{withinRectangle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height) \textcolor{keyword}{const override};}
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_line_adb82408d3d01c9fce09eef4171852836}{withinCircle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r) \textcolor{keyword}{const override};}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_line_ae3fec0f4bf40701983d2a1007a299110}{print}}()\textcolor{keyword}{const override};}
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_line_abfac21bfe7b305b24b76863a5418c075}{translate}}(\textcolor{keywordtype}{int} vertical, \textcolor{keywordtype}{int} horizontal) \textcolor{keyword}{override};}
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_line_a48b20933dbd9169bd2f65b8c06a935a4}{\string~Line}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{31 \};}
+
+\end{DoxyCode}

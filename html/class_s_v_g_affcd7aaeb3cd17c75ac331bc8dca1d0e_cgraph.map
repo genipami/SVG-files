@@ -1,0 +1,6 @@
+<map id="SVG::GetCommand" name="SVG::GetCommand">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,144,83"/>
+<area shape="rect" id="node2" href="$class_vector.html#ae89e86c682b9080f5dc463ab8569c323" title=" " alt="" coords="218,5,309,32"/>
+<area shape="rect" id="node3" href="$class_string.html#abc30fdd72adc7aee74bfb70d45c651a6" title="Return the number of characters in the string." alt="" coords="203,56,324,83"/>
+<area shape="rect" id="node4" href="$class_string.html#ac88bc91cfb525fbc492fd9331a874425" title="Not mine either...Modified to work with my string class." alt="" coords="192,107,335,133"/>
+</map>

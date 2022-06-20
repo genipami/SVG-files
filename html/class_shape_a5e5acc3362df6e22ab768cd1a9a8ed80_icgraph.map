@@ -1,0 +1,9 @@
+<map id="Shape::getColour" name="Shape::getColour">
+<area shape="rect" id="node1" title="Getter for the color value of the shape." alt="" coords="536,56,659,83"/>
+<area shape="rect" id="node2" href="$class_circle.html#ae4f138cd1dd667489a2e4cb1b418ea5d" title="Overriding of the printing method." alt="" coords="387,5,475,32"/>
+<area shape="rect" id="node6" href="$class_line.html#ae3fec0f4bf40701983d2a1007a299110" title="Overiding of the printing method for a line." alt="" coords="392,56,471,83"/>
+<area shape="rect" id="node7" href="$class_rectangle.html#ae6fcc15763a84c2cd6588a826403f3c5" title="Overriging of the printing method for a rectangle." alt="" coords="375,107,488,133"/>
+<area shape="rect" id="node3" href="$class_s_v_g.html#acd7f9c4e29b106a80bc25ae94aba70de" title=" " alt="" coords="236,56,327,83"/>
+<area shape="rect" id="node4" href="$class_s_v_g.html#a2f5e7271f4d2d05cc54fb4891775a383" title=" " alt="" coords="104,56,188,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,56,83"/>
+</map>

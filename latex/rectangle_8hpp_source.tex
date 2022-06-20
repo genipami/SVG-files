@@ -1,0 +1,26 @@
+\hypertarget{rectangle_8hpp_source}{}\doxysection{rectangle.\+hpp}
+\mbox{\hyperlink{rectangle_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{circle_8hpp}{circle.hpp}}"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_rectangle}{Rectangle}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width;}
+\DoxyCodeLine{8     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_rectangle_a69769340e2efc5eadb0dca5722b6b8a0}{Rectangle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \mbox{\hyperlink{class_string}{String}} colour, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height): \mbox{\hyperlink{class_shape}{Shape}}(x, y, colour), width(width), height(height)\{\}}
+\DoxyCodeLine{14     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_rectangle_abd59609e7c494d57f74b1ee46df33f80}{getWidth}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} width; \}}
+\DoxyCodeLine{16     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_rectangle_a5bfb002e7628599a47ad4fad1b4fd3c1}{getHeight}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} height; \}}
+\DoxyCodeLine{18     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{class_rectangle_af009666eefb0994888ecd41a7fc819dc}{operator>>}}(std::istream \&in, \mbox{\hyperlink{class_rectangle}{Rectangle}}\& rectangle);}
+\DoxyCodeLine{20     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_rectangle_a0a3c758a1ba977af405ebf96ea4ab8c5}{operator<<}}(std::ostream \&out, \textcolor{keyword}{const} \mbox{\hyperlink{class_rectangle}{Rectangle}}\& rectangle);}
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_rectangle_ac8b00b13b94b24e0509f85461fa4652b}{withinRectangle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height) \textcolor{keyword}{const override};}
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_rectangle_aa17aeaacf914fce662e88d19c18ece2d}{withinCircle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r) \textcolor{keyword}{const override};}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5}{print}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{28     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_rectangle_ac402487e1518bf6215f775d12a5dd8e1}{\string~Rectangle}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+
+\end{DoxyCode}

@@ -1,0 +1,215 @@
+\hypertarget{class_rectangle}{}\doxysection{Rectangle Class Reference}
+\label{class_rectangle}\index{Rectangle@{Rectangle}}
+
+
+{\ttfamily \#include $<$rectangle.\+hpp$>$}
+
+
+
+Inheritance diagram for Rectangle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_rectangle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rectangle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_rectangle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rectangle_a69769340e2efc5eadb0dca5722b6b8a0}{Rectangle}} (unsigned int x, unsigned int y, \mbox{\hyperlink{class_string}{String}} colour, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_rectangle_abd59609e7c494d57f74b1ee46df33f80}{get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the width of the rectangle. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_rectangle_a5bfb002e7628599a47ad4fad1b4fd3c1}{get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the height of the rectangle. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_rectangle_ac8b00b13b94b24e0509f85461fa4652b}{within\+Rectangle}} (unsigned int x, unsigned int y, unsigned int width, unsigned int height) const override
+\begin{DoxyCompactList}\small\item\em Overriging of the within\+Rectangle method for a rectangle. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_rectangle_aa17aeaacf914fce662e88d19c18ece2d}{within\+Circle}} (unsigned int cx, unsigned int cy, unsigned int r) const override
+\begin{DoxyCompactList}\small\item\em Overriging of the within\+Circle method for a rectangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Overriging of the printing method for a rectangle. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_rectangle_ac402487e1518bf6215f775d12a5dd8e1}{$\sim$\+Rectangle}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{class_rectangle_af009666eefb0994888ecd41a7fc819dc}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_rectangle}{Rectangle}} \&rectangle)
+\begin{DoxyCompactList}\small\item\em Redefinition of the reading operator. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{class_rectangle_a0a3c758a1ba977af405ebf96ea4ab8c5}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&rectangle)
+\begin{DoxyCompactList}\small\item\em Redefinition for the printing operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rectangle_a69769340e2efc5eadb0dca5722b6b8a0}\label{class_rectangle_a69769340e2efc5eadb0dca5722b6b8a0}} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{\mbox{\hyperlink{class_string}{String}}}]{colour,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with parameters. 
+
+\mbox{\Hypertarget{class_rectangle_ac402487e1518bf6215f775d12a5dd8e1}\label{class_rectangle_ac402487e1518bf6215f775d12a5dd8e1}} 
+\index{Rectangle@{Rectangle}!````~Rectangle@{$\sim$Rectangle}}
+\index{````~Rectangle@{$\sim$Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rectangle()}{~Rectangle()}}
+{\footnotesize\ttfamily virtual Rectangle\+::$\sim$\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rectangle_a5bfb002e7628599a47ad4fad1b4fd3c1}\label{class_rectangle_a5bfb002e7628599a47ad4fad1b4fd3c1}} 
+\index{Rectangle@{Rectangle}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily unsigned int Rectangle\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the height of the rectangle. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rectangle_a5bfb002e7628599a47ad4fad1b4fd3c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rectangle_abd59609e7c494d57f74b1ee46df33f80}\label{class_rectangle_abd59609e7c494d57f74b1ee46df33f80}} 
+\index{Rectangle@{Rectangle}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily unsigned int Rectangle\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the width of the rectangle. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rectangle_abd59609e7c494d57f74b1ee46df33f80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5}\label{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5}} 
+\index{Rectangle@{Rectangle}!print@{print}}
+\index{print@{print}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Rectangle\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriging of the printing method for a rectangle. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_a47c2cbff1008c84dad0de58a316ff927}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rectangle_aa17aeaacf914fce662e88d19c18ece2d}\label{class_rectangle_aa17aeaacf914fce662e88d19c18ece2d}} 
+\index{Rectangle@{Rectangle}!withinCircle@{withinCircle}}
+\index{withinCircle@{withinCircle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{withinCircle()}{withinCircle()}}
+{\footnotesize\ttfamily bool Rectangle\+::within\+Circle (\begin{DoxyParamCaption}\item[{unsigned int}]{cx,  }\item[{unsigned int}]{cy,  }\item[{unsigned int}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriging of the within\+Circle method for a rectangle. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_rectangle_aa17aeaacf914fce662e88d19c18ece2d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_rectangle_ac8b00b13b94b24e0509f85461fa4652b}\label{class_rectangle_ac8b00b13b94b24e0509f85461fa4652b}} 
+\index{Rectangle@{Rectangle}!withinRectangle@{withinRectangle}}
+\index{withinRectangle@{withinRectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{withinRectangle()}{withinRectangle()}}
+{\footnotesize\ttfamily bool Rectangle\+::within\+Rectangle (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriging of the within\+Rectangle method for a rectangle. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_afa055a8d6610c195ee3b1bc7ff783f84}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{class_rectangle_ac8b00b13b94b24e0509f85461fa4652b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_rectangle_a0a3c758a1ba977af405ebf96ea4ab8c5}\label{class_rectangle_a0a3c758a1ba977af405ebf96ea4ab8c5}} 
+\index{Rectangle@{Rectangle}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_rectangle}{Rectangle}} \&}]{rectangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Redefinition for the printing operator. 
+
+\mbox{\Hypertarget{class_rectangle_af009666eefb0994888ecd41a7fc819dc}\label{class_rectangle_af009666eefb0994888ecd41a7fc819dc}} 
+\index{Rectangle@{Rectangle}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_rectangle}{Rectangle}} \&}]{rectangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Redefinition of the reading operator. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rectangle_8hpp}{rectangle.\+hpp}}\item 
+\mbox{\hyperlink{rectangle_8cpp}{rectangle.\+cpp}}\end{DoxyCompactItemize}

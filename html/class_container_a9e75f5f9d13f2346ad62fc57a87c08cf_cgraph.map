@@ -1,0 +1,4 @@
+<map id="Container::printShapes" name="Container::printShapes">
+<area shape="rect" id="node1" title="Method that prints all the shapes." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$class_shape.html#a47c2cbff1008c84dad0de58a316ff927" title="Pure virtual method that prints the information about the shape." alt="" coords="208,5,300,32"/>
+</map>

@@ -15,7 +15,7 @@ void String::setWord(const char *word)
     delete[] this->word;
     this->length = strlen(word);
     this->word = new char[this->length + 1];
-    strcpy(this->word, word);
+    strcpy_s(this->word, this->length+1, word);
 }
 void String::setLength(const unsigned int length)
 {
@@ -25,8 +25,17 @@ String::String()
 {
     this->setLength(0);
     this->word = new char[this->getLength() + 1];
-    this->setWord("");
+    this->word[0] = '\0';
 }
+
+String::String(const char letter)
+{
+    this->word = new char[2];
+    this->word[0] = letter;
+    this->word[1] = '\0';
+    this->length = 1;
+}
+
 String::String(const char *word) : word(nullptr)
 {
     this->setLength(strlen(word));
@@ -55,20 +64,11 @@ String String::operator+(const String &other) const
     String result;
     result.setLength(this->getLength() + other.getLength());
     result.word = new char[result.getLength() + 1];
-    result.setWord(this->getWord());
-    strcat(result.word, other.getWord());
+    strcpy_s(result.word, result.getLength() + 1, this->word);
+    strcat_s(result.word, result.getLength() + 1, other.getWord());
     return result;
 }
 
-String String::operator+(const char letter) const
-{
-    String result;
-    result.setLength(this->getLength() + 1);
-    result.word = new char[result.getLength() + 1];
-    result.setWord(this->getWord());
-    result.word[result.getLength()] = letter;
-    return result;
-}
 
 String &String::operator+=(const String &other)
 {
@@ -143,19 +143,21 @@ bool String::checkSubString(const String &small) const
     return false;
 }
 
-String String::findSubString(String substring) const
+String String::findSecondPart(String substring) const
 {
-    return strstr(this->word, substring.getWord());
+   String found = strstr(this->word, substring.getWord());
+   return found.getWord() + substring.getLength();
 }
 
 String String::findValue(const String& key) const
 {
-    String substring = this->findSubString(key);
+    String substring = this->findSecondPart(key);
     int i=0;
     String result;
-    while(substring[i] != '\"' || substring[i] != ' ')
+    while(substring[i] != '\"' && substring[i] != ' ' && substring[i]!='\0')
     {
-        result = result + substring[i++];
+        result = result + substring[i];
+        i++;
     }
     return result;
 }
@@ -173,6 +175,7 @@ unsigned int String::stringToInt(const String& string)
     while(i<string.getLength())
     {
         result = result*10 + (int)(string[i] - '0');
+        i++;
     }
     return result;
 }

@@ -1,0 +1,290 @@
+\hypertarget{class_shape}{}\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+{\ttfamily \#include $<$shape.\+hpp$>$}
+
+
+
+Inheritance diagram for Shape\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{class_shape__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_a6c859bbff95f2c504c10c2939e3cfcb5}{Shape}} (int x, int y, \mbox{\hyperlink{class_string}{String}} colour)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the x value of the shape. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_shape_a1d59628ec154b534a0dc7bf228311e9f}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the y value of the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_shape_a5e5acc3362df6e22ab768cd1a9a8ed80}{get\+Colour}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the color value of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_adad988b11ecc897bf3271429792c67ab}{setX}} (unsigned int x)
+\begin{DoxyCompactList}\small\item\em Setter for the x value of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_acac52f03d011116e0c4b173c3a5cc970}{setY}} (unsigned int y)
+\begin{DoxyCompactList}\small\item\em Setter for the y value of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_ae18b08cb93361ed9ba7e1d9da68d8382}{set\+Colour}} (const \mbox{\hyperlink{class_string}{String}} \&colour)
+\begin{DoxyCompactList}\small\item\em Setter for the colour value of the shape. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_a2af0aba193b17599550c6d34b33902a6}{translate}} (int vertical, int horizontal)
+\begin{DoxyCompactList}\small\item\em Virtual void method that translates the shape vertically and horizontally. Can be overriden for future shapes. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_shape_afa055a8d6610c195ee3b1bc7ff783f84}{within\+Rectangle}} (unsigned int x, unsigned int y, unsigned int width, unsigned int height) const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method that retuns a bool value of 1 if the shape is withing the specified rectangle and 0 otherwise. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1}{within\+Circle}} (unsigned int cx, unsigned int cy, unsigned int r) const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method that retuns a bool value of 1 if the shape is withing the specified circle and 0 otherwise. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_a47c2cbff1008c84dad0de58a316ff927}{print}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual method that prints the information about the shape. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_shape_ac8ad2fd02e1e94beeb98e65ab795cd56}{$\sim$\+Shape}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_shape_af54165a29e16a8abdece9740d06e9921}{distance}} (unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2) const
+\begin{DoxyCompactList}\small\item\em Helper method that calulates the distance between two points and returns it as a double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_shape_a6c859bbff95f2c504c10c2939e3cfcb5}\label{class_shape_a6c859bbff95f2c504c10c2939e3cfcb5}} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{class_string}{String}}}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with parameters. 
+
+\mbox{\Hypertarget{class_shape_ac8ad2fd02e1e94beeb98e65ab795cd56}\label{class_shape_ac8ad2fd02e1e94beeb98e65ab795cd56}} 
+\index{Shape@{Shape}!````~Shape@{$\sim$Shape}}
+\index{````~Shape@{$\sim$Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shape()}{~Shape()}}
+{\footnotesize\ttfamily virtual Shape\+::$\sim$\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_af54165a29e16a8abdece9740d06e9921}\label{class_shape_af54165a29e16a8abdece9740d06e9921}} 
+\index{Shape@{Shape}!distance@{distance}}
+\index{distance@{distance}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{distance()}{distance()}}
+{\footnotesize\ttfamily double Shape\+::distance (\begin{DoxyParamCaption}\item[{unsigned int}]{x1,  }\item[{unsigned int}]{y1,  }\item[{unsigned int}]{x2,  }\item[{unsigned int}]{y2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Helper method that calulates the distance between two points and returns it as a double. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_af54165a29e16a8abdece9740d06e9921_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_a5e5acc3362df6e22ab768cd1a9a8ed80}\label{class_shape_a5e5acc3362df6e22ab768cd1a9a8ed80}} 
+\index{Shape@{Shape}!getColour@{getColour}}
+\index{getColour@{getColour}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getColour()}{getColour()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_string}{String}} Shape\+::get\+Colour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the color value of the shape. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_a5e5acc3362df6e22ab768cd1a9a8ed80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70}\label{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70}} 
+\index{Shape@{Shape}!getX@{getX}}
+\index{getX@{getX}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily unsigned int Shape\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the x value of the shape. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_a1d59628ec154b534a0dc7bf228311e9f}\label{class_shape_a1d59628ec154b534a0dc7bf228311e9f}} 
+\index{Shape@{Shape}!getY@{getY}}
+\index{getY@{getY}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily unsigned int Shape\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the y value of the shape. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_a1d59628ec154b534a0dc7bf228311e9f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_a47c2cbff1008c84dad0de58a316ff927}\label{class_shape_a47c2cbff1008c84dad0de58a316ff927}} 
+\index{Shape@{Shape}!print@{print}}
+\index{print@{print}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily virtual void Shape\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method that prints the information about the shape. 
+
+
+
+Implemented in \mbox{\hyperlink{class_circle_ae4f138cd1dd667489a2e4cb1b418ea5d}{Circle}}, \mbox{\hyperlink{class_line_ae3fec0f4bf40701983d2a1007a299110}{Line}}, and \mbox{\hyperlink{class_rectangle_ae6fcc15763a84c2cd6588a826403f3c5}{Rectangle}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_a47c2cbff1008c84dad0de58a316ff927_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_ae18b08cb93361ed9ba7e1d9da68d8382}\label{class_shape_ae18b08cb93361ed9ba7e1d9da68d8382}} 
+\index{Shape@{Shape}!setColour@{setColour}}
+\index{setColour@{setColour}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setColour()}{setColour()}}
+{\footnotesize\ttfamily void Shape\+::set\+Colour (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for the colour value of the shape. 
+
+\mbox{\Hypertarget{class_shape_adad988b11ecc897bf3271429792c67ab}\label{class_shape_adad988b11ecc897bf3271429792c67ab}} 
+\index{Shape@{Shape}!setX@{setX}}
+\index{setX@{setX}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Shape\+::setX (\begin{DoxyParamCaption}\item[{unsigned int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for the x value of the shape. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_adad988b11ecc897bf3271429792c67ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_acac52f03d011116e0c4b173c3a5cc970}\label{class_shape_acac52f03d011116e0c4b173c3a5cc970}} 
+\index{Shape@{Shape}!setY@{setY}}
+\index{setY@{setY}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Shape\+::setY (\begin{DoxyParamCaption}\item[{unsigned int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setter for the y value of the shape. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_acac52f03d011116e0c4b173c3a5cc970_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_a2af0aba193b17599550c6d34b33902a6}\label{class_shape_a2af0aba193b17599550c6d34b33902a6}} 
+\index{Shape@{Shape}!translate@{translate}}
+\index{translate@{translate}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily virtual void Shape\+::translate (\begin{DoxyParamCaption}\item[{int}]{vertical,  }\item[{int}]{horizontal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual void method that translates the shape vertically and horizontally. Can be overriden for future shapes. 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_line_abfac21bfe7b305b24b76863a5418c075}{Line}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{class_shape_a2af0aba193b17599550c6d34b33902a6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_a2af0aba193b17599550c6d34b33902a6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1}\label{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1}} 
+\index{Shape@{Shape}!withinCircle@{withinCircle}}
+\index{withinCircle@{withinCircle}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{withinCircle()}{withinCircle()}}
+{\footnotesize\ttfamily virtual bool Shape\+::within\+Circle (\begin{DoxyParamCaption}\item[{unsigned int}]{cx,  }\item[{unsigned int}]{cy,  }\item[{unsigned int}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method that retuns a bool value of 1 if the shape is withing the specified circle and 0 otherwise. 
+
+
+
+Implemented in \mbox{\hyperlink{class_circle_a2d5aef18fb6d3df261d8ea34ac0af50e}{Circle}}, \mbox{\hyperlink{class_line_adb82408d3d01c9fce09eef4171852836}{Line}}, and \mbox{\hyperlink{class_rectangle_aa17aeaacf914fce662e88d19c18ece2d}{Rectangle}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_shape_afa055a8d6610c195ee3b1bc7ff783f84}\label{class_shape_afa055a8d6610c195ee3b1bc7ff783f84}} 
+\index{Shape@{Shape}!withinRectangle@{withinRectangle}}
+\index{withinRectangle@{withinRectangle}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{withinRectangle()}{withinRectangle()}}
+{\footnotesize\ttfamily virtual bool Shape\+::within\+Rectangle (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual method that retuns a bool value of 1 if the shape is withing the specified rectangle and 0 otherwise. 
+
+
+
+Implemented in \mbox{\hyperlink{class_circle_ac3cd31b3de253ac4a67df61d9c8e4bf6}{Circle}}, \mbox{\hyperlink{class_line_a4c0f9f299d225412c67db9eb82a2676a}{Line}}, and \mbox{\hyperlink{class_rectangle_ac8b00b13b94b24e0509f85461fa4652b}{Rectangle}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_shape_afa055a8d6610c195ee3b1bc7ff783f84_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{shape_8hpp}{shape.\+hpp}}\end{DoxyCompactItemize}

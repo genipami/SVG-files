@@ -1,0 +1,9 @@
+<map id="SVG::translateOne" name="SVG::translateOne">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,137,83"/>
+<area shape="rect" id="node2" href="$class_container.html#a0c9d704d14f6fe09cfdf5bedc1ca870d" title=" " alt="" coords="185,31,332,57"/>
+<area shape="rect" id="node3" href="$class_shape.html#a2af0aba193b17599550c6d34b33902a6" title="Virtual void method that translates the shape vertically and horizontally. Can be overriden for futur..." alt="" coords="200,81,317,108"/>
+<area shape="rect" id="node4" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="381,5,473,32"/>
+<area shape="rect" id="node5" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="380,56,475,83"/>
+<area shape="rect" id="node6" href="$class_shape.html#adad988b11ecc897bf3271429792c67ab" title="Setter for the x value of the shape." alt="" coords="381,107,473,133"/>
+<area shape="rect" id="node7" href="$class_shape.html#acac52f03d011116e0c4b173c3a5cc970" title="Setter for the y value of the shape." alt="" coords="380,157,475,184"/>
+</map>

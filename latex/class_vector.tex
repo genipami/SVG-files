@@ -1,0 +1,132 @@
+\hypertarget{class_vector}{}\doxysection{Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_vector}\index{Vector$<$ T $>$@{Vector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$vector.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vector_a39d6069675db4ecfc1ab81d440da759a}{Vector}} ()
+\item 
+\mbox{\hyperlink{class_vector_afd524fac19e6d3d69db5198ffe2952b0}{$\sim$\+Vector}} ()
+\item 
+\mbox{\hyperlink{class_vector_a940f94b7c4a1c15a65a1ab6e13859dfe}{Vector}} (const \mbox{\hyperlink{class_vector}{Vector}} \&other)
+\item 
+\mbox{\hyperlink{class_vector}{Vector}} \& \mbox{\hyperlink{class_vector_a2fe37b54a47d28015829196cb5abec05}{operator=}} (const \mbox{\hyperlink{class_vector}{Vector}} \&other)
+\item 
+unsigned int \mbox{\hyperlink{class_vector_a2827053366fb71309d4433be20e6577d}{Get\+Size}} () const
+\item 
+void \mbox{\hyperlink{class_vector_ae89e86c682b9080f5dc463ab8569c323}{Add}} (const T \&something)
+\item 
+void \mbox{\hyperlink{class_vector_a6cafaab61fb4aae37783528db4339c91}{Remove}} (const T \&something)
+\item 
+void \mbox{\hyperlink{class_vector_aa326b3282d3f2aea9b7019945802679c}{Remove}} (unsigned int i)
+\item 
+void \mbox{\hyperlink{class_vector_ad8e9b1607513f9ff3320ded267168b2e}{Sort}} ()
+\item 
+T \& \mbox{\hyperlink{class_vector_ad391464b258710b559962e8d69521742}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned int i) const
+\item 
+T \& \mbox{\hyperlink{class_vector_a295d6e24a7e0fa00e46865fd1d8a1dd1}{operator\mbox{[}$\,$\mbox{]}}} (const unsigned int i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Vector$<$ T $>$}
+This class was NOT written by me. Credit goes to the original author, Aleksandar Makedonski, 8MI0800114. Classic \mbox{\hyperlink{class_vector}{Vector}} class that is a template for any type. it works with dynamic memory and is self-\/sufficient. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vector_a39d6069675db4ecfc1ab81d440da759a}\label{class_vector_a39d6069675db4ecfc1ab81d440da759a}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\mbox{\hyperlink{class_vector}{\+::\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_vector}{Vector}} default constructor. Sets the capacity of the memory to 8. \mbox{\Hypertarget{class_vector_afd524fac19e6d3d69db5198ffe2952b0}\label{class_vector_afd524fac19e6d3d69db5198ffe2952b0}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!````~Vector@{$\sim$Vector}}
+\index{````~Vector@{$\sim$Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vector()}{~Vector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_vector}{Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_vector}{Vector}} destructor, deletes the memory. \mbox{\Hypertarget{class_vector_a940f94b7c4a1c15a65a1ab6e13859dfe}\label{class_vector_a940f94b7c4a1c15a65a1ab6e13859dfe}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\mbox{\hyperlink{class_vector}{\+::\+Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{class_vector}{Vector}} copy constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vector_ae89e86c682b9080f5dc463ab8569c323}\label{class_vector_ae89e86c682b9080f5dc463ab8569c323}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\+Add (\begin{DoxyParamCaption}\item[{const T \&}]{something }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds new value of the same type to the \mbox{\hyperlink{class_vector}{Vector}} and increases it\textquotesingle{}s size. If the size gets too big, the vector expands. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_vector_ae89e86c682b9080f5dc463ab8569c323_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_vector_a2827053366fb71309d4433be20e6577d}\label{class_vector_a2827053366fb71309d4433be20e6577d}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+unsigned int \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Normal getter, returns current size of the vector as value. \mbox{\Hypertarget{class_vector_a2fe37b54a47d28015829196cb5abec05}\label{class_vector_a2fe37b54a47d28015829196cb5abec05}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_vector}{Vector}} \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+operator -\/ =, in case the objects are different, it copies the other object into the current one and gets care of the dynamic memory. \mbox{\Hypertarget{class_vector_a295d6e24a7e0fa00e46865fd1d8a1dd1}\label{class_vector_a295d6e24a7e0fa00e46865fd1d8a1dd1}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const unsigned int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Classic operator -\/ \mbox{[}\mbox{]}. Retrns referense to the object from the vector with index i in the array. The object is not const so it can be modified. \mbox{\Hypertarget{class_vector_ad391464b258710b559962e8d69521742}\label{class_vector_ad391464b258710b559962e8d69521742}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const unsigned int}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Classic operator -\/ \mbox{[}\mbox{]} const. Returns referense to the object from the vector with index i in the array. Only readable. \mbox{\Hypertarget{class_vector_a6cafaab61fb4aae37783528db4339c91}\label{class_vector_a6cafaab61fb4aae37783528db4339c91}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\+Remove (\begin{DoxyParamCaption}\item[{const T \&}]{something }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes some object from the vector, checks if it has that object, otherwise does nothing. \mbox{\Hypertarget{class_vector_aa326b3282d3f2aea9b7019945802679c}\label{class_vector_aa326b3282d3f2aea9b7019945802679c}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\+Remove (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_vector_ad8e9b1607513f9ff3320ded267168b2e}\label{class_vector_ad8e9b1607513f9ff3320ded267168b2e}} 
+\index{Vector$<$ T $>$@{Vector$<$ T $>$}!Sort@{Sort}}
+\index{Sort@{Sort}!Vector$<$ T $>$@{Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_vector}{Vector}}$<$ T $>$\+::\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sort \mbox{\hyperlink{class_vector}{Vector}} method. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector_8hpp}{vector.\+hpp}}\end{DoxyCompactItemize}

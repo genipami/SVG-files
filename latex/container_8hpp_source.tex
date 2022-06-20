@@ -1,0 +1,61 @@
+\hypertarget{container_8hpp_source}{}\doxysection{container.\+hpp}
+\mbox{\hyperlink{container_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{line_8hpp}{line.hpp}}"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} OPENING\_TAG = \textcolor{stringliteral}{"{}<?xml version=\(\backslash\)"{}1.0\(\backslash\)"{} standalone=\(\backslash\)"{}no\(\backslash\)"{}?>\(\backslash\)n< !DOCTYPE svg PUBLIC \(\backslash\)"{}-\///W3C//DTD SVG 1.1//EN\(\backslash\)"{}\(\backslash\)n\(\backslash\)"{}http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\(\backslash\)"{}>\(\backslash\)n< svg >\(\backslash\)n"{}};}
+\DoxyCodeLine{6 \textcolor{keyword}{static} \textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} CLOSING\_TAG = \textcolor{stringliteral}{"{}</svg>"{}};}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_container}{Container}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keyword}{static} \textcolor{keyword}{const} std::size\_t INITIAL\_CAPACITY = 8;}
+\DoxyCodeLine{12     \textcolor{keyword}{static} \textcolor{keyword}{const} std::size\_t INCREASE\_STEP = 2;}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_shape}{Shape}} **shapes;}
+\DoxyCodeLine{14     std::size\_t size;}
+\DoxyCodeLine{15     std::size\_t capacity;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} resize();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} add(\mbox{\hyperlink{class_shape}{Shape}} *shape);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} copy(\textcolor{keyword}{const} \mbox{\hyperlink{class_container}{Container}} \&other);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} deallocate();}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     std::size\_t \mbox{\hyperlink{class_container_a27a8f724ba3c81de4935eb775dca878d}{getSize}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{31 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} this-\/>size;}
+\DoxyCodeLine{33     \}}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_shape}{Shape}} **\mbox{\hyperlink{class_container_a0c9d704d14f6fe09cfdf5bedc1ca870d}{getShapes}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{35 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{36         \textcolor{keywordflow}{return} this-\/>shapes;}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_container_a1b0c5515d6863c1bc98cc93b65952f42}{Container}}() : shapes(new \mbox{\hyperlink{class_shape}{Shape}} *[\mbox{\hyperlink{class_container}{Container}}::INITIAL\_CAPACITY]), size(0), capacity(\mbox{\hyperlink{class_container}{Container}}::INITIAL\_CAPACITY) \{\}}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_container_a4e738bfa634f64636a556b0556155a17}{Container}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_container}{Container}} \&other)}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         this-\/>copy(other);}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_container}{Container}} \&\mbox{\hyperlink{class_container_adc42a6f0a2155a5cf2459685e2d0fc3a}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_container}{Container}} \&other);}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_container_ae9f5d07bfc3defda274aa06091c19f56}{\string~Container}}()}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         this-\/>deallocate();}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_a5a80f6459f91aac4f9cee005d8745f88}{addRectangle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height, \mbox{\hyperlink{class_string}{String}} colour);}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_ab07884fa459dd5a409dcfe1c04f5139e}{addCircle}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} radius, \mbox{\hyperlink{class_string}{String}} colour);}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_a9ab173f267f44c482f125f42a035ef91}{addLine}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} endX, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} endY, \mbox{\hyperlink{class_string}{String}} colour);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_a654c1a1644c9ed136906c4b88fa1c299}{remove}}(std::size\_t index);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_container_a9e75f5f9d13f2346ad62fc57a87c08cf}{printShapes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{67     \textcolor{keyword}{friend} std::ostream \&\mbox{\hyperlink{class_container_a23b65dfe9ffda24dc8051f6120d5d8e1}{operator<<}}(std::ostream \&out, \textcolor{keyword}{const} \mbox{\hyperlink{class_container}{Container}} \&container);}
+\DoxyCodeLine{69     \textcolor{keyword}{friend} std::istream \&\mbox{\hyperlink{class_container_a2ccbad631378939de5d952a5fe007390}{operator>>}}(std::istream \&in, \mbox{\hyperlink{class_container}{Container}} \&container);}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
+
+\end{DoxyCode}

@@ -1,0 +1,16 @@
+<map id="String::getWord" name="String::getWord">
+<area shape="rect" id="node1" title=" " alt="" coords="780,284,893,311"/>
+<area shape="rect" id="node2" href="$class_string.html#ac6db068779d9d5cad9fb9e188fd6865b" title="Returns the leftover string after the substring." alt="" coords="580,56,732,83"/>
+<area shape="rect" id="node5" href="$class_s_v_g.html#a2f5e7271f4d2d05cc54fb4891775a383" title=" " alt="" coords="104,107,188,133"/>
+<area shape="rect" id="node7" href="$class_string.html#ac094f267da5e0cdc7559bb1fa163f650" title="Addition operator that concatinates two strings." alt="" coords="597,157,715,184"/>
+<area shape="rect" id="node8" href="$class_string.html#ab72b23ee7dda1cb075cce5b6b27e083a" title="Is less than operator that returns a bool value." alt="" coords="597,208,715,235"/>
+<area shape="rect" id="node9" href="$class_string.html#a8d4a1cbebf054d8340d6c8e1efc98d13" title=" " alt="" coords="597,259,715,285"/>
+<area shape="rect" id="node10" href="$class_string.html#a3833f844a743166a7b9ad3d762aa3e5d" title="Is equal to operator that returns a bool value." alt="" coords="593,309,719,336"/>
+<area shape="rect" id="node11" href="$class_string.html#ac4326ac715bd4068d6c516209b482d29" title="Array index operator (can be used for assigning values) that returns the value of the element of the ..." alt="" coords="597,360,715,387"/>
+<area shape="rect" id="node12" href="$class_s_v_g.html#ac1274015bcb6bf1b662938017b6d27a0" title=" " alt="" coords="421,233,525,260"/>
+<area shape="rect" id="node13" href="$class_string.html#afc158dffcdf56e601bd640cbacdfcd3c" title="The copy constructor." alt="" coords="607,461,705,488"/>
+<area shape="rect" id="node14" href="$class_s_v_g.html#a1496d33bc25eb919274ffdae33d46e56" title=" " alt="" coords="248,436,355,463"/>
+<area shape="rect" id="node3" href="$class_string.html#a61b1403880b10d50b93c0f58642d2ad9" title="Return a string that conains the value in the quotation marks." alt="" coords="415,5,532,32"/>
+<area shape="rect" id="node4" href="$class_string.html#a6443ebdce8281546f1362f14655813e0" title="Returns an unsigned value that represents the string value in the quotation marks." alt="" coords="236,5,367,32"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,107,56,133"/>
+</map>

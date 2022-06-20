@@ -1,0 +1,7 @@
+<map id="Shape::translate" name="Shape::translate">
+<area shape="rect" id="node1" title="Virtual void method that translates the shape vertically and horizontally. Can be overriden for futur..." alt="" coords="5,81,123,108"/>
+<area shape="rect" id="node2" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="172,5,264,32"/>
+<area shape="rect" id="node3" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="171,56,265,83"/>
+<area shape="rect" id="node4" href="$class_shape.html#adad988b11ecc897bf3271429792c67ab" title="Setter for the x value of the shape." alt="" coords="172,107,264,133"/>
+<area shape="rect" id="node5" href="$class_shape.html#acac52f03d011116e0c4b173c3a5cc970" title="Setter for the y value of the shape." alt="" coords="171,157,265,184"/>
+</map>

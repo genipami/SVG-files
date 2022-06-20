@@ -1,0 +1,7 @@
+<map id="Line::withinCircle" name="Line::withinCircle">
+<area shape="rect" id="node1" title="Overriding of the withinCircle method for ae line." alt="" coords="5,56,125,83"/>
+<area shape="rect" id="node2" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="209,5,301,32"/>
+<area shape="rect" id="node3" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="207,56,302,83"/>
+<area shape="rect" id="node4" href="$class_line.html#a78012779d3006aa6891cc1309dbac568" title="Helper method that returns a bool value of 1 if the point is within the circle and 0 otherwise." alt="" coords="173,107,336,133"/>
+<area shape="rect" id="node5" href="$class_shape.html#af54165a29e16a8abdece9740d06e9921" title="Helper method that calulates the distance between two points and returns it as a double." alt="" coords="384,107,500,133"/>
+</map>

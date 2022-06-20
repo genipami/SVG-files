@@ -1,18 +1,20 @@
+#pragma once
 #include <iostream>
 
-namespace Messages
+class Messages
 {
-    void const problem()
+public:
+    static void const problemM()
     {
         std::cout << "There has been a problem!" << std::endl;
     }
 
-    void const success()
+    static void const successM()
     {
         std::cout << "The operation was successful." << std::endl;
     }
 
-    void const help()
+    static void const helpM()
     {
         std::cout << "The following commands are supported:" << std::endl;
         std::cout << "open <file>       opens <file>" << std::endl;
@@ -28,59 +30,59 @@ namespace Messages
         std::cout << "within <option>   prints out all the shapes that are contained in the <option>" << std::endl;
     }
 
-    void const unsavedChanges()
+    static void const unsavedChanges()
     {
         std::cout << "You have an open file with unsaved changes, plese select close or save first." << std::endl;
     }
 
-    void const close()
+    static void const closeM()
     {
         std::cout << "Succesfully closed ";
     }
 
-    void const save()
+    static void const saveM()
     {
         std::cout << "Succesfully saved ";
     }
 
-    void const createdRectangle()
+    static void const createdRectangle()
     {
         std::cout << "Succesfully created rectangle ";
     }
 
-    void const createdCircle()
+    static void const createdCircle()
     {
         std::cout << "Succesfully created circle ";
     }
 
-    void const createdLine()
+    static void const createdLine()
     {
         std::cout << "Succesfully created line ";
     }
 
-    void const noFigures()
+    static void const noFigures()
     {
         std::cout << "No figures are located within ";
     }
 
-    void const noFigureNumber()
+    static void const noFigureNumber()
     {
         std::cout << "There is no figure number ";
     }
 
-    void const translatedAll()
+    static void const translatedAll()
     {
         std::cout << "Translated all figures" << std::endl;
     }
 
-    void const exiting()
+    static void const exitingM()
     {
         std::cout << "Exiting program..." << std::endl;
     }
 
-    void const openedSuccessfully()
+    static void const openedSuccessfully()
     {
-        std::cout<< "Succesfully opened ";
+        std::cout << "Succesfully opened ";
     }
 
-}
+};

@@ -1,0 +1,6 @@
+<map id="Line::print" name="Line::print">
+<area shape="rect" id="node1" title="Overiding of the printing method for a line." alt="" coords="5,56,84,83"/>
+<area shape="rect" id="node2" href="$class_shape.html#a5e5acc3362df6e22ab768cd1a9a8ed80" title="Getter for the color value of the shape." alt="" coords="132,5,255,32"/>
+<area shape="rect" id="node3" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="147,56,239,83"/>
+<area shape="rect" id="node4" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="146,107,241,133"/>
+</map>

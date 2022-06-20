@@ -1,0 +1,6 @@
+<map id="Rectangle::print" name="Rectangle::print">
+<area shape="rect" id="node1" title="Overriging of the printing method for a rectangle." alt="" coords="5,56,119,83"/>
+<area shape="rect" id="node2" href="$class_shape.html#a5e5acc3362df6e22ab768cd1a9a8ed80" title="Getter for the color value of the shape." alt="" coords="167,5,289,32"/>
+<area shape="rect" id="node3" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="182,56,274,83"/>
+<area shape="rect" id="node4" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="181,107,275,133"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Circle::withinRectangle" name="Circle::withinRectangle">
+<area shape="rect" id="node1" title="Overriding of the withinRectangle method for a circle." alt="" coords="5,31,160,57"/>
+<area shape="rect" id="node2" href="$class_shape.html#ab0d8e6caeb2fee2a3ec1b09619938f70" title="Getter for the x value of the shape." alt="" coords="209,5,301,32"/>
+<area shape="rect" id="node3" href="$class_shape.html#a1d59628ec154b534a0dc7bf228311e9f" title="Getter for the y value of the shape." alt="" coords="208,56,303,83"/>
+</map>

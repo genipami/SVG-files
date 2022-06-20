@@ -1,0 +1,23 @@
+\hypertarget{circle_8hpp_source}{}\doxysection{circle.\+hpp}
+\mbox{\hyperlink{circle_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shape_8hpp}{shape.hpp}}"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_circle}{Circle}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{private}:}
+\DoxyCodeLine{7     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} radius;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_circle_a113e3e338db6bf9c08313e7dfe1008aa}{Circle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \mbox{\hyperlink{class_string}{String}} colour, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} radius): \mbox{\hyperlink{class_shape}{Shape}}(x, y, colour), radius(radius)\{\}}
+\DoxyCodeLine{13     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_circle_a10ee1371ef08adea741cfbd331f87f2a}{getRadius}}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} radius;\}}
+\DoxyCodeLine{15     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{class_circle_aca5a704bde7de36ffb4e1369daae09ff}{operator>>}}(std::istream \&in, \mbox{\hyperlink{class_circle}{Circle}}\& circle);}
+\DoxyCodeLine{17     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{class_circle_a810fc57a98af670d4dac0bcce3d86532}{operator<<}}(std::ostream \&out, \textcolor{keyword}{const} \mbox{\hyperlink{class_circle}{Circle}}\& circle);}
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_circle_ac3cd31b3de253ac4a67df61d9c8e4bf6}{withinRectangle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height) \textcolor{keyword}{const override};}
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_circle_a2d5aef18fb6d3df261d8ea34ac0af50e}{withinCircle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r) \textcolor{keyword}{const override};}
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_circle_ae4f138cd1dd667489a2e4cb1b418ea5d}{print}}()\textcolor{keyword}{const override};}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_circle_a4ef70ff0fc32809da87522debe667262}{\string~Circle}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{26 \};}
+
+\end{DoxyCode}

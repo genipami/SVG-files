@@ -1,5 +1,4 @@
 #pragma once
-#include "shape.hpp"
 #include "circle.hpp"
 
 class Rectangle : public Shape

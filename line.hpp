@@ -1,7 +1,5 @@
 #pragma once
-#include "shape.hpp"
 #include "rectangle.hpp"
-#include "circle.hpp"
 
 class Line : public Shape
 {

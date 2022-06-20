@@ -1,0 +1,4 @@
+<map id="Line::pointIsWithinCircle" name="Line::pointIsWithinCircle">
+<area shape="rect" id="node1" title="Helper method that returns a bool value of 1 if the point is within the circle and 0 otherwise." alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" href="$class_shape.html#af54165a29e16a8abdece9740d06e9921" title="Helper method that calulates the distance between two points and returns it as a double." alt="" coords="216,5,332,32"/>
+</map>

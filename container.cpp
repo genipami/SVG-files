@@ -95,8 +95,6 @@ void Container::remove(std::size_t index)
         {
             this->shapes[index] = this->shapes[size - 1];
         }
-        delete this->shapes[size - 1];
-        this->shapes[size - 1] = nullptr;
         this->size--;
     }
 }
@@ -114,9 +112,9 @@ void Container::printShapes() const
 std::ostream &operator<<(std::ostream &out, const Container &container)
 {
     out << OPENING_TAG;
-    for (std::size_t i = 0; i < container.size - 1; i++)
+    for (std::size_t i = 1; i <= container.size; i++)
     {
-        out << container.shapes[i];
+        out << &container.getShapes()[i];
     }
     out << CLOSING_TAG;
     return out;
@@ -124,13 +122,15 @@ std::ostream &operator<<(std::ostream &out, const Container &container)
 
 std::istream &operator>>(std::istream &in, Container &container)
 {
-    in.ignore('\n');
-    in.ignore('\n');
-    in.ignore('\n');
+    String one;
+    in >> one;
+    in >> one;
+    in >> one;
     String data;
-    while (!(data == CLOSING_TAG))
+    while (!(data.checkSubString(CLOSING_TAG)))
     {
         in >> data;
+        std::cout << data << std::endl;
         if (data.checkSubString("rect"))
         {
             unsigned int x = data.findIntValue("x=\"");

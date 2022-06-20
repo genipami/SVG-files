@@ -1,0 +1,7 @@
+<map id="Shape::distance" name="Shape::distance">
+<area shape="rect" id="node1" title="Helper method that calulates the distance between two points and returns it as a double." alt="" coords="384,56,500,83"/>
+<area shape="rect" id="node2" href="$class_line.html#a78012779d3006aa6891cc1309dbac568" title="Helper method that returns a bool value of 1 if the point is within the circle and 0 otherwise." alt="" coords="173,5,336,32"/>
+<area shape="rect" id="node4" href="$class_circle.html#a2d5aef18fb6d3df261d8ea34ac0af50e" title="Overriding of the withinCircle method for a circle." alt="" coords="190,56,319,83"/>
+<area shape="rect" id="node5" href="$class_rectangle.html#aa17aeaacf914fce662e88d19c18ece2d" title="Overriging of the withinCircle method for a rectangle." alt="" coords="177,107,332,133"/>
+<area shape="rect" id="node3" href="$class_line.html#adb82408d3d01c9fce09eef4171852836" title="Overriding of the withinCircle method for ae line." alt="" coords="5,5,125,32"/>
+</map>

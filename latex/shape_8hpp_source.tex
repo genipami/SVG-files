@@ -1,0 +1,46 @@
+\hypertarget{shape_8hpp_source}{}\doxysection{shape.\+hpp}
+\mbox{\hyperlink{shape_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{string_8hpp}{string.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{private}:}
+\DoxyCodeLine{9     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x;}
+\DoxyCodeLine{10     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_string}{String}} colour;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_shape_a6c859bbff95f2c504c10c2939e3cfcb5}{Shape}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \mbox{\hyperlink{class_string}{String}} colour) : x(x), y(y), colour(colour) \{\}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{18     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70}{getX}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} x; \}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_shape_a1d59628ec154b534a0dc7bf228311e9f}{getY}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} y; \}}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_string}{String}} \mbox{\hyperlink{class_shape_a5e5acc3362df6e22ab768cd1a9a8ed80}{getColour}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} colour; \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_adad988b11ecc897bf3271429792c67ab}{setX}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x) \{ this-\/>x = x; \}}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_acac52f03d011116e0c4b173c3a5cc970}{setY}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y) \{ this-\/>y = y; \}}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_ae18b08cb93361ed9ba7e1d9da68d8382}{setColour}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_string}{String}} \&colour) \{ this-\/>colour = colour; \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a2af0aba193b17599550c6d34b33902a6}{translate}}(\textcolor{keywordtype}{int} vertical, \textcolor{keywordtype}{int} horizontal)}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \textcolor{keywordflow}{if}((horizontal < 0 \&\& std::abs(horizontal)>this-\/>\mbox{\hyperlink{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70}{getX}}())||(vertical < 0 \&\& std::abs(vertical)>this-\/>\mbox{\hyperlink{class_shape_a1d59628ec154b534a0dc7bf228311e9f}{getY}}())) std::cout<< \textcolor{stringliteral}{"{}Translation is impossible."{}};}
+\DoxyCodeLine{35         this-\/>\mbox{\hyperlink{class_shape_adad988b11ecc897bf3271429792c67ab}{setX}}(this-\/>\mbox{\hyperlink{class_shape_ab0d8e6caeb2fee2a3ec1b09619938f70}{getX}}() + horizontal);}
+\DoxyCodeLine{36         this-\/>\mbox{\hyperlink{class_shape_acac52f03d011116e0c4b173c3a5cc970}{setY}}(this-\/>\mbox{\hyperlink{class_shape_a1d59628ec154b534a0dc7bf228311e9f}{getY}}() + vertical);}
+\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_shape_afa055a8d6610c195ee3b1bc7ff783f84}{withinRectangle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} height) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{42     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1}{withinCircle}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cx, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} cy, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} r) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{44     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_shape_a47c2cbff1008c84dad0de58a316ff927}{print}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_shape_ac8ad2fd02e1e94beeb98e65ab795cd56}{\string~Shape}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{50     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_shape_af54165a29e16a8abdece9740d06e9921}{distance}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y1, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x2, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y2)\textcolor{keyword}{ const}}
+\DoxyCodeLine{51 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{52         \textcolor{keywordflow}{return} sqrt(pow(x1 -\/ x2, 2) + pow(y1 -\/ y2, 2));}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \};}
+
+\end{DoxyCode}

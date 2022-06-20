@@ -40,5 +40,5 @@ bool Rectangle::withinCircle(unsigned int cx, unsigned int cy, unsigned int r) c
 }
 void Rectangle::print() const
 {
-    std::cout << "rectangle " << this->getX() << " " << this->getY() << this->width << " " << this->height << " " << this->getColour() << std::endl;
+    std::cout << "rectangle " << this->getX() << " " << this->getY()<< " " << this->width << " " << this->height << " " << this->getColour() << std::endl;
 }

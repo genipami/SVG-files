@@ -1,10 +1,11 @@
 #include "SVGfiles.cpp"
-using namespace SVG;
 
 int main()
 {
-    start();
+    SVG::start();
     return 0;
+   
+    SVG::start();
 }
 
 // g++ *.cpp; ./a.exe

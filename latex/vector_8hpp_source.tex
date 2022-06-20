@@ -1,0 +1,129 @@
+\hypertarget{vector_8hpp_source}{}\doxysection{vector.\+hpp}
+\mbox{\hyperlink{vector_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_vector}{Vector}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{private}:}
+\DoxyCodeLine{10     T* data;}
+\DoxyCodeLine{11     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} capacity;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} Free()}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         \textcolor{keyword}{delete}[] this-\/>data;}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} Expand()}
+\DoxyCodeLine{27     \{}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_vector}{Vector}} copy(*\textcolor{keyword}{this});}
+\DoxyCodeLine{29         this-\/>Free();}
+\DoxyCodeLine{30         this-\/>capacity *= 2;}
+\DoxyCodeLine{31         this-\/>data = \textcolor{keyword}{new} T[this-\/>capacity];}
+\DoxyCodeLine{32         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{33         \{}
+\DoxyCodeLine{34             this-\/>data[i] = copy.data[i];}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_vector_a39d6069675db4ecfc1ab81d440da759a}{Vector}}()}
+\DoxyCodeLine{42     \{}
+\DoxyCodeLine{43         this-\/>data = \textcolor{keyword}{new} T[8];}
+\DoxyCodeLine{44         this-\/>size = 0;}
+\DoxyCodeLine{45         this-\/>capacity = 8;}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{50     \mbox{\hyperlink{class_vector_afd524fac19e6d3d69db5198ffe2952b0}{\string~Vector}}()}
+\DoxyCodeLine{51     \{}
+\DoxyCodeLine{52         this-\/>Free();}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{57     \mbox{\hyperlink{class_vector_a940f94b7c4a1c15a65a1ab6e13859dfe}{Vector}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector}{Vector}}\& other)}
+\DoxyCodeLine{58     \{}
+\DoxyCodeLine{59         this-\/>size = other.size;}
+\DoxyCodeLine{60         this-\/>capacity = other.capacity;}
+\DoxyCodeLine{61         this-\/>data = \textcolor{keyword}{new} T[this-\/>capacity];}
+\DoxyCodeLine{62         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < this-\/>size; i++)}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             this-\/>data[i] = other.data[i];}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{70     \mbox{\hyperlink{class_vector}{Vector}}\& \mbox{\hyperlink{class_vector_a2fe37b54a47d28015829196cb5abec05}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_vector}{Vector}}\& other)}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&other)}
+\DoxyCodeLine{73         \{}
+\DoxyCodeLine{74             this-\/>Free();}
+\DoxyCodeLine{75             this-\/>size = other.size;}
+\DoxyCodeLine{76             this-\/>capacity = other.capacity;}
+\DoxyCodeLine{77             this-\/>data = \textcolor{keyword}{new} T[this-\/>capacity];}
+\DoxyCodeLine{78             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0; i < this-\/>size; i++)}
+\DoxyCodeLine{79             \{}
+\DoxyCodeLine{80                 this-\/>data[i] = other.data[i];}
+\DoxyCodeLine{81             \}}
+\DoxyCodeLine{82         \}}
+\DoxyCodeLine{83         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{84     \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 }
+\DoxyCodeLine{90     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_vector_a2827053366fb71309d4433be20e6577d}{GetSize}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{91 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{92         \textcolor{keywordflow}{return} this-\/>size;}
+\DoxyCodeLine{93     \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vector_ae89e86c682b9080f5dc463ab8569c323}{Add}}(\textcolor{keyword}{const} T\& something)}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if} (this-\/>size + 1 > this-\/>capacity)}
+\DoxyCodeLine{101         \{}
+\DoxyCodeLine{102             this-\/>Expand();}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104         this-\/>data[this-\/>size] = something;}
+\DoxyCodeLine{105         this-\/>size++;}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vector_a6cafaab61fb4aae37783528db4339c91}{Remove}}(\textcolor{keyword}{const} T\& something)}
+\DoxyCodeLine{112     \{}
+\DoxyCodeLine{113         \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{114         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{115         \textcolor{keywordflow}{for} (i = 0; i < this-\/>size; i++)}
+\DoxyCodeLine{116         \{}
+\DoxyCodeLine{117             \textcolor{keywordflow}{if} (!found \&\& this-\/>data[i] == something)}
+\DoxyCodeLine{118             \{}
+\DoxyCodeLine{119                 found = \textcolor{keyword}{true};}
+\DoxyCodeLine{120                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{121             \}}
+\DoxyCodeLine{122         \}}
+\DoxyCodeLine{123         \textcolor{keywordflow}{if} (found)}
+\DoxyCodeLine{124         \{}
+\DoxyCodeLine{125             this-\/>size-\/-\/;}
+\DoxyCodeLine{126             \textcolor{keywordflow}{for} (i; i < this-\/>size; i++)}
+\DoxyCodeLine{127             \{}
+\DoxyCodeLine{128                 this-\/>data[i] = this-\/>data[i + 1];}
+\DoxyCodeLine{129             \}}
+\DoxyCodeLine{130         \}}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vector_aa326b3282d3f2aea9b7019945802679c}{Remove}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i)}
+\DoxyCodeLine{133     \{}
+\DoxyCodeLine{134         \textcolor{keywordflow}{if}(i < this-\/>size)}
+\DoxyCodeLine{135         \{}
+\DoxyCodeLine{136             this-\/>size-\/-\/;}
+\DoxyCodeLine{137             \textcolor{keywordflow}{for} (i; i < this-\/>size; i++)}
+\DoxyCodeLine{138             \{}
+\DoxyCodeLine{139                 this-\/>data[i] = this-\/>data[i + 1];}
+\DoxyCodeLine{140             \}}
+\DoxyCodeLine{141         \}}
+\DoxyCodeLine{142     \}}
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vector_ad8e9b1607513f9ff3320ded267168b2e}{Sort}}()}
+\DoxyCodeLine{147     \{}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149     \}\textcolor{comment}{//Not needed still}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{154     T\& \mbox{\hyperlink{class_vector_ad391464b258710b559962e8d69521742}{operator[]}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i)\textcolor{keyword}{ const}}
+\DoxyCodeLine{155 \textcolor{keyword}{    }\{}
+\DoxyCodeLine{156         \textcolor{keywordflow}{return} this-\/>data[i];}
+\DoxyCodeLine{157     \}}
+\DoxyCodeLine{161     T\& \mbox{\hyperlink{class_vector_a295d6e24a7e0fa00e46865fd1d8a1dd1}{operator[]}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i)}
+\DoxyCodeLine{162     \{}
+\DoxyCodeLine{163         \textcolor{keywordflow}{return} this-\/>data[i];}
+\DoxyCodeLine{164     \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \};}
+
+\end{DoxyCode}

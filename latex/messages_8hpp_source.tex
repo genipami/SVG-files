@@ -1,0 +1,93 @@
+\hypertarget{messages_8hpp_source}{}\doxysection{messages.\+hpp}
+\mbox{\hyperlink{messages_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_messages}{Messages}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{public}:}
+\DoxyCodeLine{7     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_ae31974d392d09d19ad758ade830e1131}{problemM}}()}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9         std::cout << \textcolor{stringliteral}{"{}There has been a problem!"{}} << std::endl;}
+\DoxyCodeLine{10     \}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a189c0d957b2a6001b0b247004be53d95}{successM}}()}
+\DoxyCodeLine{13     \{}
+\DoxyCodeLine{14         std::cout << \textcolor{stringliteral}{"{}The operation was successful."{}} << std::endl;}
+\DoxyCodeLine{15     \}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_ac36bad7a647a96e02dc39e03c260f204}{helpM}}()}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         std::cout << \textcolor{stringliteral}{"{}The following commands are supported:"{}} << std::endl;}
+\DoxyCodeLine{20         std::cout << \textcolor{stringliteral}{"{}open <file>       opens <file>"{}} << std::endl;}
+\DoxyCodeLine{21         std::cout << \textcolor{stringliteral}{"{}close             closes currently opened file"{}} << std::endl;}
+\DoxyCodeLine{22         std::cout << \textcolor{stringliteral}{"{}save              saves the currently open file"{}} << std::endl;}
+\DoxyCodeLine{23         std::cout << \textcolor{stringliteral}{"{}saveas <file>     saves the currently open file in <file>"{}} << std::endl;}
+\DoxyCodeLine{24         std::cout << \textcolor{stringliteral}{"{}help              prints this information"{}} << std::endl;}
+\DoxyCodeLine{25         std::cout << \textcolor{stringliteral}{"{}exit              exits the program"{}} << std::endl;}
+\DoxyCodeLine{26         std::cout << \textcolor{stringliteral}{"{}print             prints all shapes on the screen"{}} << std::endl;}
+\DoxyCodeLine{27         std::cout << \textcolor{stringliteral}{"{}create            creates a new shape"{}} << std::endl;}
+\DoxyCodeLine{28         std::cout << \textcolor{stringliteral}{"{}erase <n>         erases the shape on the n-\/th place"{}} << std::endl;}
+\DoxyCodeLine{29         std::cout << \textcolor{stringliteral}{"{}translate [<n>]   translates the n-\/th shape or all shapes if n is not specified"{}} << std::endl;}
+\DoxyCodeLine{30         std::cout << \textcolor{stringliteral}{"{}within <option>   prints out all the shapes that are contained in the <option>"{}} << std::endl;}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a36269d05d0ef838afef98ddb8a169516}{unsavedChanges}}()}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         std::cout << \textcolor{stringliteral}{"{}You have an open file with unsaved changes, plese select close or save first."{}} << std::endl;}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_aa89cdf75db1944d7df06539d91b6d68d}{closeM}}()}
+\DoxyCodeLine{39     \{}
+\DoxyCodeLine{40         std::cout << \textcolor{stringliteral}{"{}Succesfully closed "{}};}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a5956648bf95d36801ac61a7ed4715e4c}{saveM}}()}
+\DoxyCodeLine{44     \{}
+\DoxyCodeLine{45         std::cout << \textcolor{stringliteral}{"{}Succesfully saved "{}};}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a723884ce8998aa2eb4c4d21d985963e3}{createdRectangle}}()}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         std::cout << \textcolor{stringliteral}{"{}Succesfully created rectangle "{}};}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_ab37b5b00b260445cecc23aa8bbe6fa96}{createdCircle}}()}
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         std::cout << \textcolor{stringliteral}{"{}Succesfully created circle "{}};}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_ab6d1df732b760ba75f11e024334132bd}{createdLine}}()}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60         std::cout << \textcolor{stringliteral}{"{}Succesfully created line "{}};}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a55b2c4121d5c47ccf2401d0d2593cfcf}{noFigures}}()}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         std::cout << \textcolor{stringliteral}{"{}No figures are located within "{}};}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a52651383d029631c6c49650aa7bcd24f}{noFigureNumber}}()}
+\DoxyCodeLine{69     \{}
+\DoxyCodeLine{70         std::cout << \textcolor{stringliteral}{"{}There is no figure number "{}};}
+\DoxyCodeLine{71     \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_ae62db6cc87067cd4a28594010557b064}{translatedAll}}()}
+\DoxyCodeLine{74     \{}
+\DoxyCodeLine{75         std::cout << \textcolor{stringliteral}{"{}Translated all figures"{}} << std::endl;}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_ab998438345f9804810a8d0d099708fc8}{exitingM}}()}
+\DoxyCodeLine{79     \{}
+\DoxyCodeLine{80         std::cout << \textcolor{stringliteral}{"{}Exiting program..."{}} << std::endl;}
+\DoxyCodeLine{81     \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \textcolor{keyword}{const} \mbox{\hyperlink{class_messages_a9a6a8cb899688a1fd5895bd7ceadb5c5}{openedSuccessfully}}()}
+\DoxyCodeLine{84     \{}
+\DoxyCodeLine{85         std::cout << \textcolor{stringliteral}{"{}Succesfully opened "{}};}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \};}
+
+\end{DoxyCode}

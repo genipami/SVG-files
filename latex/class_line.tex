@@ -1,0 +1,239 @@
+\hypertarget{class_line}{}\doxysection{Line Class Reference}
+\label{class_line}\index{Line@{Line}}
+
+
+{\ttfamily \#include $<$line.\+hpp$>$}
+
+
+
+Inheritance diagram for Line\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{class_line__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Line\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{class_line__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_line_a994762553d3e6f9fe0804c31bd116690}{Line}} (unsigned int x, unsigned int y, \mbox{\hyperlink{class_string}{String}} colour, unsigned int endX, unsigned int endY)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_line_a2c2403198247d38b50b5b4e7c6f27bee}{point\+Is\+Within\+Rectangle}} (int x, int y, unsigned int rectX, unsigned int rectY, unsigned int width, unsigned int height) const
+\begin{DoxyCompactList}\small\item\em Helper method that returns a bool value of 1 if the point is within the rectangle and 0 otherwise. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_line_a78012779d3006aa6891cc1309dbac568}{point\+Is\+Within\+Circle}} (int x, int y, unsigned int cx, unsigned int cy, unsigned int r) const
+\begin{DoxyCompactList}\small\item\em Helper method that returns a bool value of 1 if the point is within the circle and 0 otherwise. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_line_a4c0f9f299d225412c67db9eb82a2676a}{within\+Rectangle}} (unsigned int x, unsigned int y, unsigned int width, unsigned int height) const override
+\begin{DoxyCompactList}\small\item\em Overriding of the within\+Rectanle method for a line. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_line_adb82408d3d01c9fce09eef4171852836}{within\+Circle}} (unsigned int cx, unsigned int cy, unsigned int r) const override
+\begin{DoxyCompactList}\small\item\em Overriding of the within\+Circle method for ae line. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_line_ae3fec0f4bf40701983d2a1007a299110}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Overiding of the printing method for a line. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_line_abfac21bfe7b305b24b76863a5418c075}{translate}} (int vertical, int horizontal) override
+\begin{DoxyCompactList}\small\item\em Overriding of the translate method for a line. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_line_a48b20933dbd9169bd2f65b8c06a935a4}{$\sim$\+Line}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{class_line_a5e92f131e0ac9a1544405842db2c05d1}{operator$>$$>$}} (std\+::istream \&in, \mbox{\hyperlink{class_line}{Line}} \&line)
+\begin{DoxyCompactList}\small\item\em Redefinition of the reading operator. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{class_line_aad4d43dd686b8d7ac10a5f91c833211f}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_line}{Line}} \&line)
+\begin{DoxyCompactList}\small\item\em Redefinition of the printing operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_line_a994762553d3e6f9fe0804c31bd116690}\label{class_line_a994762553d3e6f9fe0804c31bd116690}} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{\mbox{\hyperlink{class_string}{String}}}]{colour,  }\item[{unsigned int}]{endX,  }\item[{unsigned int}]{endY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor with parameters. 
+
+\mbox{\Hypertarget{class_line_a48b20933dbd9169bd2f65b8c06a935a4}\label{class_line_a48b20933dbd9169bd2f65b8c06a935a4}} 
+\index{Line@{Line}!````~Line@{$\sim$Line}}
+\index{````~Line@{$\sim$Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{$\sim$Line()}{~Line()}}
+{\footnotesize\ttfamily virtual Line\+::$\sim$\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_line_a78012779d3006aa6891cc1309dbac568}\label{class_line_a78012779d3006aa6891cc1309dbac568}} 
+\index{Line@{Line}!pointIsWithinCircle@{pointIsWithinCircle}}
+\index{pointIsWithinCircle@{pointIsWithinCircle}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{pointIsWithinCircle()}{pointIsWithinCircle()}}
+{\footnotesize\ttfamily bool Line\+::point\+Is\+Within\+Circle (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{unsigned int}]{cx,  }\item[{unsigned int}]{cy,  }\item[{unsigned int}]{r }\end{DoxyParamCaption}) const}
+
+
+
+Helper method that returns a bool value of 1 if the point is within the circle and 0 otherwise. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{class_line_a78012779d3006aa6891cc1309dbac568_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_line_a78012779d3006aa6891cc1309dbac568_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_line_a2c2403198247d38b50b5b4e7c6f27bee}\label{class_line_a2c2403198247d38b50b5b4e7c6f27bee}} 
+\index{Line@{Line}!pointIsWithinRectangle@{pointIsWithinRectangle}}
+\index{pointIsWithinRectangle@{pointIsWithinRectangle}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{pointIsWithinRectangle()}{pointIsWithinRectangle()}}
+{\footnotesize\ttfamily bool Line\+::point\+Is\+Within\+Rectangle (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{unsigned int}]{rectX,  }\item[{unsigned int}]{rectY,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption}) const}
+
+
+
+Helper method that returns a bool value of 1 if the point is within the rectangle and 0 otherwise. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_line_a2c2403198247d38b50b5b4e7c6f27bee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_line_ae3fec0f4bf40701983d2a1007a299110}\label{class_line_ae3fec0f4bf40701983d2a1007a299110}} 
+\index{Line@{Line}!print@{print}}
+\index{print@{print}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Line\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overiding of the printing method for a line. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_a47c2cbff1008c84dad0de58a316ff927}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{class_line_ae3fec0f4bf40701983d2a1007a299110_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_line_abfac21bfe7b305b24b76863a5418c075}\label{class_line_abfac21bfe7b305b24b76863a5418c075}} 
+\index{Line@{Line}!translate@{translate}}
+\index{translate@{translate}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Line\+::translate (\begin{DoxyParamCaption}\item[{int}]{vertical,  }\item[{int}]{horizontal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriding of the translate method for a line. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_a2af0aba193b17599550c6d34b33902a6}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{class_line_abfac21bfe7b305b24b76863a5418c075_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_line_adb82408d3d01c9fce09eef4171852836}\label{class_line_adb82408d3d01c9fce09eef4171852836}} 
+\index{Line@{Line}!withinCircle@{withinCircle}}
+\index{withinCircle@{withinCircle}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{withinCircle()}{withinCircle()}}
+{\footnotesize\ttfamily bool Line\+::within\+Circle (\begin{DoxyParamCaption}\item[{unsigned int}]{cx,  }\item[{unsigned int}]{cy,  }\item[{unsigned int}]{r }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriding of the within\+Circle method for ae line. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_af67ef0c3a806b9200cf13c3e81e6fdd1}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_line_adb82408d3d01c9fce09eef4171852836_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_line_a4c0f9f299d225412c67db9eb82a2676a}\label{class_line_a4c0f9f299d225412c67db9eb82a2676a}} 
+\index{Line@{Line}!withinRectangle@{withinRectangle}}
+\index{withinRectangle@{withinRectangle}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{withinRectangle()}{withinRectangle()}}
+{\footnotesize\ttfamily bool Line\+::within\+Rectangle (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{unsigned int}]{width,  }\item[{unsigned int}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriding of the within\+Rectanle method for a line. 
+
+
+
+Implements \mbox{\hyperlink{class_shape_afa055a8d6610c195ee3b1bc7ff783f84}{Shape}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_line_a4c0f9f299d225412c67db9eb82a2676a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_line_aad4d43dd686b8d7ac10a5f91c833211f}\label{class_line_aad4d43dd686b8d7ac10a5f91c833211f}} 
+\index{Line@{Line}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{class_line}{Line}} \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Redefinition of the printing operator. 
+
+\mbox{\Hypertarget{class_line_a5e92f131e0ac9a1544405842db2c05d1}\label{class_line_a5e92f131e0ac9a1544405842db2c05d1}} 
+\index{Line@{Line}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in,  }\item[{\mbox{\hyperlink{class_line}{Line}} \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Redefinition of the reading operator. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{line_8hpp}{line.\+hpp}}\item 
+\mbox{\hyperlink{line_8cpp}{line.\+cpp}}\end{DoxyCompactItemize}

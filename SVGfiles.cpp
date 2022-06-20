@@ -1,58 +1,15 @@
+#pragma once
 #include <fstream>
 #include "container.hpp"
-#include "messages.cpp"
 #include "vector.hpp"
-using namespace Messages;
+#include "messages.hpp"
 
-namespace SVG
+
+
+class SVG
 {
-    void writeFile(const Container &container, const String &filename)
-    {
-        std::ofstream output(filename.getWord(), std::ios::trunc);
-
-        if (!output.is_open())
-        {
-            std::cout << "Problem with file!" << std::endl;
-            return;
-        }
-        output << container;
-        output.close();
-    }
-
-    void readFile(Container &container, const String &filename)
-    {
-        std::ifstream data(filename.getWord());
-        if (!(data.is_open()))
-        {
-            problem();
-            return;
-        }
-        data >> container;
-        data.close();
-    }
-
-    void printAll(const Container &container)
-    {
-        for (int i = 0; i < container.getSize(); i++)
-        {
-            container.getShapes()[i]->print();
-        }
-    }
-
-    void translateAll(const Container &container, int vertical, int horizontal)
-    {
-        for (int i = 0; i < container.getSize(); i++)
-        {
-            container.getShapes()[i]->translate(vertical, horizontal);
-        }
-    }
-
-    void translateOne(const Container &container, int vertical, int horizontal, unsigned int index)
-    {
-        container.getShapes()[index]->translate(vertical, horizontal);
-    }
-
-    Vector<String> GetCommand(String &command_line)
+public:
+    static Vector<String> GetCommand(String& command_line)
     {
         unsigned int i = 0, j;
         unsigned int size = command_line.getLength();
@@ -73,28 +30,72 @@ namespace SVG
 
         return command;
     }
-
-    void create(Container &container, String &input)
+    static void writeFile(const Container &container, const String &filename)
     {
-        Vector<String> data = GetCommand(input);
+        std::ofstream output(filename.getWord(), std::ios::trunc);
+
+        if (!output.is_open())
+        {
+            std::cout << "Problem with file!" << std::endl;
+            return;
+        }
+        output << container;
+        output.close();
+    }
+
+    static void readFile(Container &container, const String &filename)
+    {
+        std::fstream data;
+        data.open(filename.getWord(), std::fstream::in | std::fstream::app);
+        std::cout << data.tellp() << std::endl;
+        data >> container;
+        data.close();
+    }
+
+    static void printAll(const Container &container)
+    {
+        for (int i = 0; i < container.getSize(); i++)
+        {
+            container.getShapes()[i]->print();
+        }
+    }
+
+    static void translateAll(const Container &container, int vertical, int horizontal)
+    {
+        for (int i = 0; i < container.getSize(); i++)
+        {
+            container.getShapes()[i]->translate(vertical, horizontal);
+        }
+    }
+
+    static void translateOne(const Container &container, int vertical, int horizontal, unsigned int index)
+    {
+        container.getShapes()[index]->translate(vertical, horizontal);
+    }
+
+    
+
+    static void create(Container &container, String &input)
+    {
+        Vector<String> data = SVG::GetCommand(input);
         if (data[1] == "rectangle")
         {
             container.addRectangle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
-            createdRectangle();
+            Messages::createdRectangle();
         }
         else if (data[1] == "circle")
         {
             container.addCircle(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), data[5]);
-            createdCircle();
+            Messages::createdCircle();
         }
         else if (data[1] == "line")
         {
             container.addLine(String::stringToInt(data[2]), String::stringToInt(data[3]), String::stringToInt(data[4]), String::stringToInt(data[5]), data[6]);
-            createdLine();
+            Messages::createdLine();
         }
     }
 
-    void within(const Container &container, String &input)
+    static void within(const Container &container, String &input)
     {
         Vector<String> data = GetCommand(input);
         if (data[1] == "rectangle")
@@ -112,7 +113,7 @@ namespace SVG
             }
             if (counter == 0)
             {
-                noFigures();
+                Messages::noFigures();
                 rectangle.print();
             }
         }
@@ -131,16 +132,16 @@ namespace SVG
             }
             if (counter == 0)
             {
-                noFigures();
+                Messages::noFigures();
                 circle.print();
             }
         }
     }
     
-    void start()
+    static void start()
     {
         Container container;
-        help();
+        Messages::helpM();
         String input;
         String filename;
         bool exit = false;
@@ -154,16 +155,17 @@ namespace SVG
                 if (input.checkSubString("open"))
                 {
 
-                    filename = input.findSubString("open ");
-                    readFile(container, filename);
+                    filename = input.findSecondPart("open ");
+                    std::cout << filename << std::endl;
+                    SVG::readFile(container, filename);
                     opened = true;
-                    openedSuccessfully();
+                    Messages::openedSuccessfully();
                     std::cout << filename << std::endl;
                 }
 
                 if (input.checkSubString("exit"))
                 {
-                    exiting();
+                    Messages::exitingM();
                     exit = true;
                 }
             }
@@ -174,15 +176,16 @@ namespace SVG
                 {
                     Container empty;
                     container = empty;
-                    close();
+                    opened = false;
+                    Messages::closeM();
                 }
 
                 if (input.checkSubString("saveas"))
                 {
-                    filename = input.findSubString("saveas ");
+                    filename = input.findSecondPart("saveas ");
                     writeFile(container, filename);
                     saved = true;
-                    save();
+                    Messages::saveM();
                     std::cout << filename << std::endl;
                 }
 
@@ -190,23 +193,23 @@ namespace SVG
                 {
                     writeFile(container, filename);
                     saved = true;
-                    save();
+                    Messages::saveM();
                 }
 
                 if (input.checkSubString("help"))
                 {
-                    help();
+                    Messages::helpM();
                 }
 
                 if (input.checkSubString("exit"))
                 {
                     if (!saved)
                     {
-                        unsavedChanges();
+                        Messages::unsavedChanges();
                     }
                     else
                     {
-                        exiting();
+                        Messages::exitingM();
                         exit = true;
                     }
                 }
@@ -233,14 +236,14 @@ namespace SVG
                     }
                     else
                     {
-                        noFigureNumber();
+                        Messages::noFigureNumber();
                         std::cout << index << std::endl;
                     }
                 }
 
                 if (input.checkSubString("translate"))
                 {
-                    String data = input.findSubString("translate ");
+                    String data = input.findSecondPart("translate ");
                     int vertical = input.findIntValue("vertical=");
                     int horizontal = input.findIntValue("horizontal=");
                     if (data.getWord()[0] >= '0' && data.getWord()[0] <= '9')
@@ -264,4 +267,4 @@ namespace SVG
     }
 
     
-}
+};
